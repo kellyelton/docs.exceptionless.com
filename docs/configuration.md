@@ -12,7 +12,7 @@ These options can either be specified in a `_config.yml` file placed in your
 site’s root directory, or can be specified as flags for the `jekyll` executable
 in the terminal.
 
-## Configuration Settings
+## Configuration Blake Settings
 
 ### Global Configuration
 
