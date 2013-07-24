@@ -1,18 +1,58 @@
-<header>
-  <nav class="mobile-nav show-on-mobiles">
-    {% include primary-nav-items.html %}
-  </nav>
-  <div class="grid">
-    <div class="unit one-third center-on-mobiles">
-      <h1>
-        <a href="{{ site.url }}/">
-          <span>Jekyll</span>
-          <img src="{{ site.url }}/img/logo-2x.png" width="249px" height="115px" alt="">
-        </a>
-      </h1>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container" id="header-nav">
+            <button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="http://exceptionless.com/"><img class="brand" src="/images/exceptionless-logo.png" alt="Exceptionless" /></a>
+            
+            
+    <div class="nav-collapse collapse" style="height: 0px;">
+        <ul class="nav marketing-nav pull-right visible-desktop">
+            <li >
+                <a href="http://exceptionless.com/tour">Tour</a>
+            </li>
+            <li >
+                <a href="http://exceptionless.com/pricing">Pricing</a>
+            </li>
+            <li>
+                <a href="{{ site.url }}/news/">Blog</a>
+            </li>
+            <li>
+                <a href="{{ site.url }}/docs/home/">Docs</a>
+            </li>
+            
+                <li>
+                    <a href="http://exceptionless.com/signup" class="btn btn-primary btn-header">Sign Up</a>
+                </li>
+        </ul>
+        <ul class="nav marketing-nav visible-tablet visible-phone">
+            <li >
+                <a href="http://exceptionless.com/tour">Tour</a>
+            </li>
+            <li >
+                <a href="http://exceptionless.com/pricing">Pricing</a>
+            </li>
+            <li>
+                <a href="{{ site.url }}/news/">Blog</a>
+            </li>
+            <li>
+                <a href="{{ site.url }}/docs/home/">Docs</a>
+            </li>
+            
+                <li>
+                    <a href="http://exceptionless.com/account/login">Log In</a>
+                </li>
+                <li>
+                    <a href="http://exceptionless.com/signup">Sign Up</a>
+                </li>
+        </ul>
     </div>
-    <nav class="main-nav unit two-thirds hide-on-mobiles">
-      {% include primary-nav-items.html %}
-    </nav>
-  </div>
-</header>
+
+
+        </div> <!-- /container -->
+    </div> <!-- /navbar-inner -->
+</div> <!-- /navbar -->
+

@@ -3,14 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <title>{{ page.title }}</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="alternate" type="application/rss+xml" title="Jekyll • Simple, blog-aware, static sites - Feed" href="/feed.xml" />
-  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="{{ site.url }}/css/normalize.css" />
-  <link rel="stylesheet" href="{{ site.url }}/css/gridism.css" />
+
+  <link rel="alternate" type="application/rss+xml" title="Exceptionless - News Feed" href="/feed.xml" />
+  <meta content="Exceptionless provides real-time error reporting for your apps. It organizes the gathered information into simple actionable data that will help your app become exceptionless!" name="description">
+  <meta content="Exceptionless" property="og:title">
+  <meta content="Exceptionless provides real-time error reporting for your apps. It organizes the gathered information into simple actionable data that will help your app become exceptionless!" property="og:description">
+  <meta content="//exceptionless.com/images/exceptionless.png" property="og:image">
+  <link href="http://exceptionless.com" rel="canonical">
+
+  <meta name="application-name" content="Exceptionless"/> 
+  <meta name="msapplication-TileColor" content="#2c2c2c"/> 
+  <meta name="msapplication-TileImage" content="http://exceptionless.com/images/exceptionless-144.png"/>
+  <meta name="msapplication-navbutton-color" content="#73C03A" />
+  <meta name="msapplication-starturl" content="http://exceptionless.com/project"/>
+  <meta name="msapplication-task" content="name=Dashboard; action-uri=http://exceptionless.com/project; icon-uri=http://exceptionless.com/images/icons/dashboard.ico"/>
+  <meta name="msapplication-task" content="name=Most Recent; action-uri=http://exceptionless.com/project/recent; icon-uri=http://exceptionless.com/images/icons/recent.ico"/>
+  <meta name="msapplication-task" content="name=Most Frequent; action-uri=http://exceptionless.com/project/frequent; icon-uri=http://exceptionless.com/images/icons/frequent.ico"/>
+  <meta name="msapplication-task" content="name=New Errors; action-uri=http://exceptionless.com/project/new; icon-uri=http://exceptionless.com/images/icons/new.ico"/>
+
+  <link rel="shortcut icon" href="http://exceptionless.com/favicon.ico" type="image/x-icon" />
+  <link rel='icon' href='http://exceptionless.com/favicon.ico' type="image/x-icon">
+
+  <meta name="copyright" content="&copy; 2013 Exceptionless.com" />
+  <meta content="website" property="og:type">
+  <meta name='viewport' content='initial-scale=.75, maximum-scale=1' />
+  <meta name="apple-mobile-web-app-title" content="Exceptionless" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="http://exceptionless.com/touch-icon-iphone-114.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="http://exceptionless.com/touch-icon-iphone-114.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="http://exceptionless.com/touch-icon-ipad-144.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="http://exceptionless.com/touch-icon-ipad-144.png" />
+  
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ site.url }}/css/style.css" />
   <link rel="stylesheet" href="{{ site.url }}/css/pygments.css" />
-  <link rel="icon" type="image/x-icon" href="{{ site.url }}/favicon.png" />
-  <script src="{{ site.url }}/js/modernizr-2.5.3.min.js"></script>
+  
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>

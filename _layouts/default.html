@@ -1,10 +1,18 @@
 {% include top.html %}
 
-<body class="wrap">
+<body id="root">
   {% include header.html %}
-
-  {{ content }}
-
+  
+  <div id="wrap">
+      <div id="main" class="container clear-top mini-footer">
+          <div id="content">
+              <div class="container">
+                  {{ content }}
+              </div> <!-- /container -->
+          </div> <!-- /content -->
+      </div>
+  </div>
+  
   {% include footer.html %}
   {% include analytics.html %}
 
