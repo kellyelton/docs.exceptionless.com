@@ -1,22 +1,20 @@
-<div class="section-nav">
-  <div class="left align-right">
-    {% if page.prev_section != null %}
-      <a href="{{ site.url }}/contents/{{ page.prev_section }}" class="prev">
-        Back
-      </a>
-    {% else %}
-      <span class="prev disabled">Back</span>
-    {% endif %}
-  </div>
-  <div class="right align-left">
-    {% if page.next_section != null %}
-      <a href="{{ site.url }}/contents/{{ page.next_section }}" class="next">
-        Next
-      </a>
-    {% else %}
-      <span class="next disabled">Next</span>
-    {% endif %}
-  </div>
-  <div class="clear"></div>
-</div>
-
+<ul class="pager">
+  {% if page.prev_section != null %}
+  <li class="previous">
+    <a href="{{ site.url }}/contents/{{ page.prev_section }}">Back</a>
+  </li>
+  {% else %}
+  <li class="previous disabled">
+    <a href="{{ site.url }}/contents/{{ page.prev_section }}">Back</a>
+  </li>
+  {% endif %}
+  {% if page.next_section != null %}
+  <li class="previous">
+    <a href="{{ site.url }}/contents/{{ page.next_section }}">Next</a>
+  </li>
+  {% else %}
+  <li class="previous disabled">
+    <a href="{{ site.url }}/contents/{{ page.prev_section }}">Next</a>
+  </li>
+  {% endif %}
+</ul>

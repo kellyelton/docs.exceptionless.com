@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Troubleshooting
-prev_section: usage
+prev_section: sendingerrors
 permalink: /contents/troubleshooting/
 ---
 

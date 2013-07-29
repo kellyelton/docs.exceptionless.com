@@ -1,9 +1,9 @@
 ---
 layout: docs
-title: Basic Usage
-prev_section: installation
+title: Sending Errors
+prev_section: configuration
 next_section: troubleshooting
-permalink: /contents/usage/
+permalink: /contents/sendingerrors/
 ---
 
 The Jekyll gem makes a `jekyll` executable available to you in your Terminal

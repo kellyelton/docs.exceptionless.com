@@ -1,8 +1,8 @@
 ---
 layout: docs
 title: Configuration
-prev_section: structure
-next_section: frontmatter
+prev_section: gettingstarted
+next_section: sendingerrors
 permalink: /contents/configuration/
 ---
 

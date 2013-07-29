@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Welcome
-next_section: quickstart
+next_section: gettingstarted
 permalink: /contents/home/
 ---
 

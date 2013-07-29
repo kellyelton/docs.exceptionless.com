@@ -1,9 +1,9 @@
 ---
 layout: docs
-title: Quick-start guide
+title: Getting Started
 prev_section: home
-next_section: installation
-permalink: /contents/quickstart/
+next_section: configuration
+permalink: /contents/gettingstarted/
 ---
 
 For the impatient, here's how to get a boilerplate Jekyll site up and running.

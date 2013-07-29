@@ -1,8 +1,8 @@
 ---
 layout: docs
 title: Installation
-prev_section: quickstart
-next_section: usage
+prev_section: gettingstarted
+next_section: sendingerrors
 permalink: /contents/installation/
 ---
 
