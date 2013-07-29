@@ -9,11 +9,11 @@
   </li>
   {% endif %}
   {% if page.next_section != null %}
-  <li class="previous">
+  <li class="previous pull-right">
     <a href="{{ site.url }}/contents/{{ page.next_section }}">Next</a>
   </li>
   {% else %}
-  <li class="previous disabled">
+  <li class="previous disabled pull-right">
     <a href="{{ site.url }}/contents/{{ page.prev_section }}">Next</a>
   </li>
   {% endif %}
