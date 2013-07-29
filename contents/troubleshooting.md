@@ -31,12 +31,12 @@ methods:
 
 If you are using Exceptionless in a console application or any other scenario where an error is submitted
 and the process is immediately terminated, then you will need to make sure that the queue is processed before
-the process ends. Errors are queued to disk and sent in the background, if the application isn't running then the 
+the application ends. Errors are queued to disk and sent in the background, if the application isn't running then the 
 errors cannot be sent. You can manually force the queue to be processed by calling the following line of code before
 before the process ends:
 
 {% highlight c# %}
-ExceptionlessClient.Current.ProcessQueue();
+ExceptionlessClient.Current.ProcessQueue()
 {% endhighlight %}
 
 This will cause the error queue to be processed synchronously and the error to be reported. If this doesn't
