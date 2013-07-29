@@ -15,7 +15,7 @@ If you encounter errors while installing Exceptionless via NuGet.
 Please [contact us](https://github.com/codesmithtools/docs.exceptionless.com/issues/new) 
 with any errors that you are seeing in the NuGet's Package Manager Console.
 
-## Exceptionless Client Logging.
+## Exceptionless Client Logging
 
 The Exceptionless Client can be configured to write diagnostic messages to an log file to 
 help diagnose any issues with the client. You will need to turn on logging via configuration.
