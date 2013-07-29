@@ -2,7 +2,7 @@
 layout: docs
 title: Welcome
 next_section: quickstart
-permalink: /docs/home/
+permalink: /contents/home/
 ---
 
 This site aims to be a comprehensive guide to Jekyll. We’ll cover topics such

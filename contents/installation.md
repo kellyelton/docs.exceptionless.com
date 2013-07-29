@@ -3,7 +3,7 @@ layout: docs
 title: Installation
 prev_section: quickstart
 next_section: usage
-permalink: /docs/installation/
+permalink: /contents/installation/
 ---
 
 Getting Jekyll installed and ready-to-go should only take a few minutes. If it

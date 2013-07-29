@@ -3,7 +3,7 @@ layout: docs
 title: Troubleshooting
 prev_section: deployment-methods
 next_section: sites
-permalink: /docs/troubleshooting/
+permalink: /contents/troubleshooting/
 ---
 
 If you ever run into problems installing or using Jekyll, here's a few tips

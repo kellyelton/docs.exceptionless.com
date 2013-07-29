@@ -3,7 +3,7 @@ layout: docs
 title: Basic Usage
 prev_section: installation
 next_section: structure
-permalink: /docs/usage/
+permalink: /contents/usage/
 ---
 
 The Jekyll gem makes a `jekyll` executable available to you in your Terminal
