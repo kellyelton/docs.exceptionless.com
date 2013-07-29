@@ -1859,3 +1859,16 @@ blockquote p {
 	}
 	
 }
+
+p {
+  line-height: 1.5em;
+}
+
+h1 {
+  color: #616161;
+}
+
+h2 {
+  font-size: 22px;
+}
+

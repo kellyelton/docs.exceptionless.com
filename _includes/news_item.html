@@ -4,21 +4,18 @@
       {{ post.title }}
     </a>
   </h2>
-  <span class="post-category">
-    {% for category in post.categories %}
-    <span class="label">{{ category }}</span>
-    {% endfor %}
-  </span>
-  <div class="post-meta">
+  <div class="post-meta muted">
     <span class="post-date">
       {{ post.date | date_to_string }}
     </span>
     <a href="https://github.com/{{ post.author }}" class="post-author">
-      <img src="https://github.com/{{ post.author }}.png" class="avatar" />
       {{ post.author }}
     </a>
+    <span class="post-category">
+      {% for category in post.categories %}
+      <span class="label">{{ category }}</span>
+      {% endfor %}
+    </span>
   </div>
-  <p class="post-content">
-    {{ post.content }}
-  </p>
+  <p class="post-content">{{ post.content }}</p>
 </article>
