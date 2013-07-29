@@ -6,7 +6,7 @@ next_section: sendingerrors
 permalink: /contents/configuration/
 ---
 
-Exceptionless2 is configured using a config section in your web.config or app.config depending on what kind of
+Exceptionless is configured using a config section in your web.config or app.config depending on what kind of
 project you have. Installing the correct NuGet package should automatically add the necessary configuration
 elements.  It should look like this:
 
