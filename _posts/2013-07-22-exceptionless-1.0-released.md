@@ -8,4 +8,4 @@ categories: [release]
 ---
 
 Exceptionless 1.0 has been released and provides a simple to use exception reporting service for .NET applications.
-Learn more at.
+More to come soon!!
