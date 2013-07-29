@@ -10,7 +10,7 @@ Exceptionless is configured using a config section in your web.config or app.con
 project you have. Installing the correct NuGet package should automatically add the necessary configuration
 elements.  It should look like this:
 
-```xml
+{% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
   <configSections>
@@ -28,4 +28,4 @@ elements.  It should look like this:
     ...
   </system.webServer>
 </configuration>
-```
+{% endhighlight %}
