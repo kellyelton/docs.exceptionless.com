@@ -13,11 +13,12 @@ layout: news
     {% endfor %}
   </span>
   <div class="post-meta">
+    <i class="icon-time"></i>
     <span class="post-date">
       {{ page.date | date_to_string }}
     </span>
     <a href="https://github.com/{{ page.author }}" class="post-author">
-      <img src="https://github.com/{{ page.author }}.png" class="avatar" />
+      <i class="icon-user"></i>
       {{ page.author }}
     </a>
   </div>
