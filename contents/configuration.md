@@ -39,5 +39,5 @@ elements.  It should look like this:
 You can also configure Exceptionless using attributes like this:
 
 {% highlight C# %}
-[assembly: Exceptionless("YOUR_API_KEY")]
+[assembly: Exceptionless("YOUR\_API\_KEY")]
 {% endhighlight %}
