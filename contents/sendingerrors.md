@@ -37,3 +37,26 @@ try {
         .Submit();
 }
 {% endhighlight %}
+
+## Modifying Unhandled Exception Reports
+
+You can get notified, add additional information or ignore unhandled exceptions by wiring up to the
+`UnhandledExceptionReporting` event.
+
+{% highlight c# %}
+// Wire up to this event in somewhere in your application's startup code.
+ExceptionlessClient.Current.UnhandledExceptionReporting += OnUnhandledExceptionReporting;
+
+void OnUnhandledExceptionReporting(object sender, UnhandledExceptionReportingEventArgs args) {
+    if (args.Error.Code == "404" || args.Error.Type == "System.Web.HttpRequestValidationException")
+        args.Cancel = true;
+        return;
+    }
+    
+    args.Error.AddObject(order, "Order", excludedPropertyNames: new [] { "CreditCardNumber" }, maxDepth: 2);
+    args.Error.Tags.Add("Order");
+    args.Error.MarkAsCritical();
+    args.Error.UserEmail = user.EmailAddress;
+}
+{% endhighlight %}
+
