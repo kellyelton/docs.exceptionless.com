@@ -48,11 +48,13 @@ You can get notified, add additional information or ignore unhandled exceptions 
 ExceptionlessClient.Current.UnhandledExceptionReporting += OnUnhandledExceptionReporting;
 
 void OnUnhandledExceptionReporting(object sender, UnhandledExceptionReportingEventArgs args) {
+    // ignore 404 and request validation errors
     if (args.Error.Code == "404" || args.Error.Type == "System.Web.HttpRequestValidationException")
         args.Cancel = true;
         return;
     }
     
+    // add some additional data to the report
     args.Error.AddObject(order, "Order", excludedPropertyNames: new [] { "CreditCardNumber" }, maxDepth: 2);
     args.Error.Tags.Add("Order");
     args.Error.MarkAsCritical();
