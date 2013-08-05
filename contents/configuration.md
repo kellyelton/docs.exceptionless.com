@@ -6,7 +6,11 @@ next_section: sendingerrors
 permalink: /contents/configuration/
 ---
 
-Exceptionless is configured using a config section in your web.config or app.config depending on what kind of
+Exceptionless can be configured in multiple ways.
+
+## Config File
+
+Exceptionless can be configured using a config section in your web.config or app.config depending on what kind of
 project you have. Installing the correct NuGet package should automatically add the necessary configuration
 elements.  It should look like this:
 
@@ -28,4 +32,12 @@ elements.  It should look like this:
     ...
   </system.webServer>
 </configuration>
+{% endhighlight %}
+
+## Attributes
+
+You can also configure Exceptionless using attributes like this:
+
+{% highlight C# %}
+[assembly: Exceptionless("YOUR_API_KEY")]
 {% endhighlight %}
