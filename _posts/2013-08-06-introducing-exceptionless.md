@@ -25,7 +25,3 @@ You can integrate **Exceptionless** into your application in a matter of seconds
 <p><img class="img-polaroid" src="http://exceptionless.com/images/screens/stack.png" alt="Error Stack" /></p>
 
 We believe that all app developers should strive to be **Exceptionless** and that’s why we are offering a [FREE plan](http://exceptionless.com/pricing)! It’s easy to get started, so what are you waiting for??
-
-<div class="pagination-centered">
-  <a href="https://exceptionless.com/signup" class="btn btn-primary btn-large">Become Exceptionless today!</a>
-</div>
