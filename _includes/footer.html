@@ -22,8 +22,8 @@
             return;
         
         if (window.location.pathname.indexOf('/news/') !== -1)
-            $('a[href$="/news/"]:first').addClass('active');
+            $('#news').addClass('active');
         else if (window.location.pathname.indexOf('/contents/') !== -1)
-            $('a[href$="/contents/home/"]:first').addClass('active');    
+            $('#help').addClass('active');    
     });
 </script>
