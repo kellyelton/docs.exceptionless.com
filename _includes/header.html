@@ -17,10 +17,10 @@
             <li >
                 <a href="http://exceptionless.com/pricing">Pricing</a>
             </li>
-            <li>
+            <li class="{% if page.url contains '/news/' %}active{% endif %}">
                 <a href="{{ site.url }}/news/">News</a>
             </li>
-            <li>
+            <li class="{% if page.url contains '/contents/' %}active{% endif %}">
                 <a href="{{ site.url }}/contents/home/">Help</a>
             </li>
             
@@ -35,10 +35,10 @@
             <li >
                 <a href="http://exceptionless.com/pricing">Pricing</a>
             </li>
-            <li>
+            <li class="{% if page.url contains '/news/' %}active{% endif %}">
                 <a href="{{ site.url }}/news/">News</a>
             </li>
-            <li>
+            <li class="{% if page.url contains '/contents/' %}active{% endif %}">
                 <a href="{{ site.url }}/contents/home/">Help</a>
             </li>
             
