@@ -4,7 +4,7 @@ title: "Introducing Exceptionless"
 date: "2013-08-06 014:12:52 -0600"
 author: bniemyjski
 version: 1.0.0
-categories: [release]
+categories: [announcement]
 ---
 
 [**Exceptionless**](http://exceptionless.com) is a new error reporting service that helps you answer important questions about the software that you build.
@@ -27,4 +27,6 @@ You can integrate **Exceptionless** into your application in a matter of seconds
 
 We believe that all app developers should strive to be **Exceptionless** and that’s why we are offering a [FREE plan](http://exceptionless.com/pricing)! It’s easy to get started, so what are you waiting for??
 
-<a href="https://exceptionless.com/signup" class="btn btn-primary btn-large">Become Exceptionless today!</a>
+<div class="pagination-centered">
+  <a href="https://exceptionless.com/signup" class="btn btn-primary btn-large">Become Exceptionless today!</a>
+</div>
