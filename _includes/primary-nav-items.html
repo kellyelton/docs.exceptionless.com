@@ -1,8 +1,8 @@
 <ul>
-  <li class="{% if page.url contains '/contents/' %}current{% endif %}">
+  <li class="{% if page.url contains '/contents/' %}active{% endif %}">
     <a href="{{ site.url }}/contents/home">Doc<span class="hidden-desktop">s</span><span class="visible-desktop">umentation</span></a>
   </li>
-  <li class="{% if page.author %}current{% endif %}">
+  <li class="{% if page.url contains '/news/' %}active{% endif %}">
     <a href="{{ site.url }}/news">News</a>
   </li>
 </ul>
