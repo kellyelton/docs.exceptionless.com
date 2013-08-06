@@ -1,6 +1,6 @@
 ---
 layout: news
-title: Releases
+title: Exceptionless - Releases
 permalink: /news/releases/
 author: all
 ---
