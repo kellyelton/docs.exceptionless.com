@@ -1872,6 +1872,17 @@ h2 {
   font-size: 22px;
 }
 
+/*** CUSTOM ***/
 .news .img-polaroid {
   padding: 0px;
+}
+
+.news article h2 {
+  margin-top: -4px;
+  margin-bottom: 5px;
+}
+
+.news article .post-category {
+  margin-top: -1px;
+  padding-right: 5px;
 }
