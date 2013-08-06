@@ -18,9 +18,12 @@
 <script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
 <script type="text/javascript">
     $(window).ready(function() { 
-        if (window.location.pathname.indexof("/news/") !== -1)
+        if (!window.location.pathname)
+            return;
+        
+        if (window.location.pathname.indexof('/news') !== -1)
             $('a[href$="/news/"]:first').addClass('active');
-        else if (window.location.pathname.indexof("/contents/home/") !== -1)
+        else if (window.location.pathname.indexof('/contents') !== -1)
             $('a[href$="/contents/home/"]:first').addClass('active');    
     });
 </script>
