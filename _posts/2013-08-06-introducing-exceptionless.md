@@ -3,7 +3,6 @@ layout: news_item
 title: "Introducing Exceptionless"
 date: "2013-08-06 014:12:52 -0600"
 author: bniemyjski
-version: 1.0.0
 categories: [announcement]
 ---
 
