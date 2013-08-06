@@ -19,11 +19,13 @@ The definition of the word exceptionless is: **to be without exception**. Our pr
 
 <img class="img-polaroid" src="http://exceptionless.com/images/screens/dashboard.png" alt="Dashboard" />
 
+
 You can integrate **Exceptionless** into your application in a matter of seconds and start getting the answer to all these questions right now! It’s simply a matter of adding our library and setting your API key.
 
 **Exceptionless** gives you a look at your application health and allows you to take a closer look at how oftern errors occur. You can dive into a specific error stack to get detailed information about an error. You can also mark an error as fixed or hide an error completely.
 
 <img class="img-polaroid" src="http://exceptionless.com/images/screens/stack.png" alt="Error Stack" />
+
 
 We believe that all app developers should strive to be **Exceptionless** and that’s why we are offering a [FREE plan](http://exceptionless.com/pricing)! It’s easy to get started, so what are you waiting for??
 
