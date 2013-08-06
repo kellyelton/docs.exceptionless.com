@@ -1,6 +1,6 @@
 ---
 layout: news
-title: News
+title: Exceptionless - News
 permalink: /news/
 author: all
 ---
