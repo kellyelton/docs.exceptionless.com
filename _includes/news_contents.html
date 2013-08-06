@@ -1,17 +1,17 @@
 <div class="span2 visible-desktop">
   <aside>
     <ul>
-      <li class="{% if page.title == 'News' %}current{% endif %}">
+      <li class="{% if page.title == 'News' %}active{% endif %}">
         <a href="/news/">All News</a>
       </li>
-      <li class="{% if page.title == 'Releases' %}current{% endif %}">
+      <li class="{% if page.title == 'Releases' %}active{% endif %}">
         <a href="/news/releases/">Exceptionless Releases</a>
       </li>
     </ul>
     <h4>Recent Releases</h4>
     <ul>
       {% for post in site.posts limit:5 %}
-      <li class="{% if page.title == post.title %}current{% endif %}">
+      <li class="{% if page.title == post.title %}active{% endif %}">
         <a href="{{ post.url }}">Version {{ post.version }}</a>
       </li>
       {% endfor %}
