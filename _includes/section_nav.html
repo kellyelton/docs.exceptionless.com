@@ -1,20 +1,20 @@
 <ul class="pager">
   {% if page.prev_section != null %}
   <li class="previous">
-    <a href="{{ site.url }}/contents/{{ page.prev_section }}">Back</a>
+    <a href="{{ site.url }}/contents/{{ page.prev_section }}">&larr; Back</a>
   </li>
   {% else %}
   <li class="previous disabled">
-    <a href="#">Back</a>
+    <a href="#">&larr; Back</a>
   </li>
   {% endif %}
   {% if page.next_section != null %}
   <li class="previous pull-right">
-    <a href="{{ site.url }}/contents/{{ page.next_section }}">Next</a>
+    <a href="{{ site.url }}/contents/{{ page.next_section }}">&rarr; Next</a>
   </li>
   {% else %}
   <li class="previous disabled pull-right">
-    <a href="#">Next</a>
+    <a href="#">&rarr; Next</a>
   </li>
   {% endif %}
 </ul>
