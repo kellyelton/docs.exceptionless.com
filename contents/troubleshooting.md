@@ -7,6 +7,10 @@ permalink: /contents/troubleshooting/
 
 If your errors aren't being sent to the server there are a few things that you can try to diagnose the issue.
 
+## Update your client
+
+Please make sure that you are using the latest version of the client.
+
 ## Enable client logging
 
 The Exceptionless client can be configured to write diagnostic messages to a log file to 
