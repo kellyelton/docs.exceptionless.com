@@ -21,11 +21,13 @@
         <a href="{{ site.url }}/contents/troubleshooting">Troubleshooting</a>
       </li>
     </ul>
+    {% if page.edit_path %}
     <h4>Contribute</h4>
     <ul>
       <li>
-        <a href="https://github.com/codesmithtools/docs.exceptionless.com/edit/gh-pages/contents/{{page.name}}.md">Edit Page2</a>
+        <a href="https://github.com/codesmithtools/docs.exceptionless.com/edit/gh-pages/contents/{{page.edit_path}}.md">Edit Page</a>
       </li>
     </ul>
+    {% endif %}
   </aside>
 </div>
