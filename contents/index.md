@@ -1,5 +1,6 @@
 ---
 layout: docs
+edit_path: home
 title: Welcome
 next_section: gettingstarted
 permalink: /contents/home/
