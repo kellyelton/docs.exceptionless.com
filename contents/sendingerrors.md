@@ -1,5 +1,6 @@
 ---
 layout: docs
+edit_path: sendingerrors
 title: Sending Errors
 prev_section: configuration
 next_section: troubleshooting
