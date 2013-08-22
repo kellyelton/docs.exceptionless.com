@@ -1,5 +1,6 @@
 ---
 layout: docs
+edit_path: troubleshooting
 title: Troubleshooting
 prev_section: sendingerrors
 permalink: /contents/troubleshooting/
