@@ -1,5 +1,6 @@
 ---
 layout: docs
+edit_path: configuration
 title: Configuration
 prev_section: gettingstarted
 next_section: sendingerrors
