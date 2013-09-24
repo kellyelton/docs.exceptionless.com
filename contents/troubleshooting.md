@@ -39,7 +39,7 @@ methods:
 <exceptionless apiKey="YOUR_API_KEY" enableLogging="true" logPath="C:\exceptionless.log" />
 {% endhighlight %}
 
-### Attributes
+### Attribute
 
 {% highlight c# %}
 [assembly: Exceptionless("YOUR_API_KEY", EnableLogging = true, LogPath = "C:\\exceptionless.log")]
