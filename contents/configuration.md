@@ -51,7 +51,7 @@ different folder, then you can use the `QueuePath` setting.
 ### Configuration file
 
 {% highlight xml %}
-<exceptionless apiKey="YOUR_API_KEY" queuePath="C:\ExceptionlessErrors />
+<exceptionless apiKey="YOUR_API_KEY" queuePath="C:\ExceptionlessErrors" />
 {% endhighlight %}
 
 ### Attribute
