@@ -35,7 +35,7 @@ elements.  It should look like this:
 </configuration>
 {% endhighlight %}
 
-## Attributes
+## Attribute
 
 You can also configure Exceptionless using attributes like this:
 
