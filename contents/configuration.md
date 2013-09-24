@@ -42,3 +42,20 @@ You can also configure Exceptionless using attributes like this:
 {% highlight c# %}
 [assembly: Exceptionless("YOUR_API_KEY")]
 {% endhighlight %}
+
+## Using a Custom Error Queue Folder
+
+By default the Exceptionless client stores errors in an isolated storage folder. If you want to change it to use a
+different folder, then you can use the `QueuePath` setting.
+
+### Configuration file
+
+{% highlight xml %}
+<exceptionless apiKey="YOUR_API_KEY" queuePath="C:\ExceptionlessErrors />
+{% endhighlight %}
+
+### Attribute
+
+{% highlight c# %}
+[assembly: Exceptionless("YOUR_API_KEY", QueuePath="C:\\ExceptionlessErrors")]
+{% endhighlight %}
