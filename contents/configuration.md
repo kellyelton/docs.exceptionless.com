@@ -46,7 +46,8 @@ You can also configure Exceptionless using attributes like this:
 ## Using a Custom Error Queue Folder
 
 By default the Exceptionless client stores errors in an isolated storage folder. If you want to change it to use a
-different folder, then you can use the `QueuePath` setting.
+different folder, then you can use the `QueuePath` setting. If you specify a `QueuePath`, make sure that whatever
+identity the application is running under has full permissions to that folder.
 
 ### Configuration file
 
