@@ -3,6 +3,7 @@ layout: docs
 edit_path: troubleshooting
 title: Troubleshooting
 prev_section: sendingerrors
+next_section: faq
 permalink: /contents/troubleshooting/
 ---
 
