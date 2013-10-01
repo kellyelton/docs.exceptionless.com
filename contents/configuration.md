@@ -60,3 +60,19 @@ identity the application is running under has full permissions to that folder.
 {% highlight c# %}
 [assembly: Exceptionless("YOUR_API_KEY", QueuePath="C:\\ExceptionlessErrors")]
 {% endhighlight %}
+
+## Disabling Exceptionless during testing
+
+You can disable Exceptionless from reporting errors during testing using the `Enabled` setting.
+
+### Configuration file
+
+{% highlight xml %}
+<exceptionless apiKey="YOUR_API_KEY" enabled="false" />
+{% endhighlight %}
+
+### Attribute
+
+{% highlight c# %}
+[assembly: Exceptionless("YOUR_API_KEY", Enabled="false")]
+{% endhighlight %}
