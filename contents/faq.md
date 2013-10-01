@@ -18,4 +18,6 @@ A: You can reset your error data by going into the manage project page and click
 ## Q: What happens if my internet connection goes down?
 A: Exceptionless queues all error submissions to disk and will retry them later.
 
+## Q: How can I disable error reporting during testing?
+A: Set the `enabled` attribute to `false` in the `exceptionless` config section.
 
