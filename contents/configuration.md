@@ -76,3 +76,23 @@ You can disable Exceptionless from reporting errors during testing using the `En
 {% highlight c# %}
 [assembly: Exceptionless("YOUR_API_KEY", Enabled="false")]
 {% endhighlight %}
+
+
+## Enabling trace message collection
+
+An error report may also contain trace messages that were written before the error occurred. You can enable this setting by specifying a `TraceLogLimit` setting with a value greater than 0. This value is the maxiumum number of trace messages that will be submitted with the error report.
+### Configuration file
+
+{% highlight xml %}
+<exceptionless apiKey="YOUR_API_KEY">
+  <settings>
+    <add name="TraceLogLimit" value="10" />
+  </settings>
+</exceptionless>
+{% endhighlight %}
+
+### Attribute
+
+{% highlight c# %}
+[assembly: Exceptionless.Configuration.ExceptionlessSetting(Exceptionless.Configuration.ClientConfiguration.TraceLogLimitKey, "10")]
+{% endhighlight %}
