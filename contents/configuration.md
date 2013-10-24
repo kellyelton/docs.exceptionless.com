@@ -94,5 +94,6 @@ An error report may also contain trace messages that were written before the err
 ### Attribute
 
 {% highlight c# %}
-[assembly: Exceptionless.Configuration.ExceptionlessSetting(Exceptionless.Configuration.ClientConfiguration.TraceLogLimitKey, "10")]
+using Exceptionless.Configuration;
+[assembly: ExceptionlessSetting(ClientConfiguration.TraceLogLimitKey, "10")]
 {% endhighlight %}
