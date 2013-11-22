@@ -61,6 +61,19 @@ identity the application is running under has full permissions to that folder.
 [assembly: Exceptionless("YOUR_API_KEY", QueuePath="C:\\ExceptionlessErrors")]
 {% endhighlight %}
 
+
+## WCF Configuration
+
+You can also configure exceptionless to capture all WCF exceptions following the steps below.
+1. Install the [Exceptionless.Web](http://www.nuget.org/packages/Exceptionless.Web/) NuGet package. 
+2. Configure your Api Key (see the previous section).
+3. Add the ExceptionlessWcfHandleErrorAttribute to your WCF Classes.
+
+{% highlight c# %}
+[ExceptionlessWcfHandleErrorAttribute]
+{% endhighlight %}
+
+
 ## Disabling Exceptionless during testing
 
 You can disable Exceptionless from reporting errors during testing using the `Enabled` setting.
@@ -76,7 +89,6 @@ You can disable Exceptionless from reporting errors during testing using the `En
 {% highlight c# %}
 [assembly: Exceptionless("YOUR_API_KEY", Enabled="false")]
 {% endhighlight %}
-
 
 ## Enabling trace message collection
 
