@@ -15,15 +15,15 @@ Please see the official [NuGet documentation](http://docs.nuget.org/docs/start-h
 
 NuGet can display packages from multiple package sources. To add a package source, you must first open the **Manage NuGet Packages** dialog. 
 
-![Manage NuGet Packages"](../images/nightlybuilds/manage.nuget.packages.png "Manage NuGet Packages")
+![Manage NuGet Packages"](../../images/nightlybuilds/manage.nuget.packages.png "Manage NuGet Packages")
 
 Next, click on the settings button to launch the options dialog. Make sure the **Package Sources** node is selected in the dialog.
 
-![Package Sources](../images/nightlybuilds/package.sources.png "Package Sources")
+![Package Sources](../../images/nightlybuilds/package.sources.png "Package Sources")
 
 Click the add button, located in the upper righthand side of the dialog to add a new package source. Create the package source with the name: **Exceptionless Nightly Builds** and source: **https://www.myget.org/F/exceptionless/**
 
-![Manage NuGet Packages Nightly Builds](../images/nightlybuilds/manage.nuget.packages.nightly.png "Manage NuGet Packages Nightly Builds")
+![Manage NuGet Packages Nightly Builds](../../images/nightlybuilds/manage.nuget.packages.nightly.png "Manage NuGet Packages Nightly Builds")
 
 Next, click the Update button to apply the changes and click the OK button to go back to the **Manage NuGet Packages** dialog. 
 
