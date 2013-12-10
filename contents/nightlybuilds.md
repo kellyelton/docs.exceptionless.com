@@ -25,7 +25,7 @@ Click the add button, located in the upper righthand side of the dialog to add a
 
 ![Manage NuGet Packages Nightly Builds](../images/nightlybuilds/manage.nuget.packages.nightly.png "Manage NuGet Packages Nightly Builds")
 
-Next, click the Update button to apply the changes. Then click the OK button to go back to the **Manage NuGet Packages** dialog. 
+Next, click the Update button to apply the changes and click the OK button to go back to the **Manage NuGet Packages** dialog. 
 
 Finally, select the **Exceptionless Nightly Builds** node. Your now all set to install the latest nightly build of exceptionless or update from a stable build to a nightly build.
 
