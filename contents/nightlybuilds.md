@@ -29,7 +29,7 @@ Next, click the Update button to apply the changes. Then click the OK button to 
 
 Finally, select the **Exceptionless Nightly Builds** node. Your now all set to install the latest nightly build of exceptionless or update from a stable build to a nightly build.
 
-**If you use a build server, you may also have to add https://www.myget.org/F/exceptionless/ as a package source in your ![NuGet config settings](http://docs.nuget.org/docs/reference/nuget-config-settings "NuGet config settings").**
+**If you use a build server, you may also have to add https://www.myget.org/F/exceptionless/ as a package source in your** ![NuGet config settings](http://docs.nuget.org/docs/reference/nuget-config-settings "NuGet config settings")**.**
 
 ## Using stable builds
 
