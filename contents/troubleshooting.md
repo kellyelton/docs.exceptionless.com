@@ -87,3 +87,6 @@ public class NLogExceptionlessLog : IExceptionlessLog {
 By default, Exceptionless stores errors in an isolated storage folder. You can find this folder using the 1st 8
 characters of your API key. So if your API key is `a7aa250fce7e4e36a22a7031cf2337c8`, then you would search in
 the `C:\ProgramData\IsolatedStorage` folder for a folder named `a7aa250f`.
+
+## Firewall
+If you are behind a proxy or firewall, please ensure that you can connect to https://collector.exceptionless.com
