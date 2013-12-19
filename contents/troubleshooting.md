@@ -28,6 +28,25 @@ ExceptionlessClient.Current.ProcessQueue()
 This will cause the error queue to be processed synchronously and the error to be reported. If this doesn't
 solve the issue then please enable client logging and contacting us the log file.
 
+## How to locate the default isolated storage queue folder
+
+By default, Exceptionless stores errors in an isolated storage folder. You can find this folder using the 1st 8
+characters of your API key. So if your API key is `a7aa250fce7e4e36a22a7031cf2337c8`, then you would search in
+the `C:\ProgramData\IsolatedStorage` folder for a folder named `a7aa250f`.
+
+## Firewall / Proxy
+If you are behind a proxy or firewall, please ensure that you can connect to [https://collector.exceptionless.com](https://collector.exceptionless.com)
+
+Your proxy settings should be picked up automatically by the Exceptionless client, but you can also try manually configuring the settings by adding a section to your app/web.config file.
+
+{% highlight xml %}
+<system.net>
+    <defaultProxy useDefaultCredentials="true">
+      <proxy proxyaddress="proxyAddress" usesystemdefault="true"/>
+    </defaultProxy>
+</system.net>
+{% endhighlight %}
+
 ## Enable client logging
 
 The Exceptionless client can be configured to write diagnostic messages to a log file to 
@@ -82,21 +101,3 @@ public class NLogExceptionlessLog : IExceptionlessLog {
 }
 {% endhighlight %}
 
-## How to locate the default isolated storage queue folder
-
-By default, Exceptionless stores errors in an isolated storage folder. You can find this folder using the 1st 8
-characters of your API key. So if your API key is `a7aa250fce7e4e36a22a7031cf2337c8`, then you would search in
-the `C:\ProgramData\IsolatedStorage` folder for a folder named `a7aa250f`.
-
-## Firewall / Proxy
-If you are behind a proxy or firewall, please ensure that you can connect to [https://collector.exceptionless.com](https://collector.exceptionless.com)
-
-Your proxy settings should be picked up automatically by the Exceptionless client, but you can also try manually configuring the settings by adding a section to your app/web.config file.
-
-{% highlight xml %}
-<system.net>
-    <defaultProxy useDefaultCredentials="true">
-      <proxy proxyaddress="proxyAddress" usesystemdefault="true"/>
-    </defaultProxy>
-</system.net>
-{% endhighlight %}
