@@ -96,7 +96,7 @@ Your proxy settings should be picked up automatically by the Exceptionless clien
 {% highlight xml %}
 <system.net>
     <defaultProxy useDefaultCredentials="true">
-      <proxy proxyaddress="proxyAddress" usesystemdefault="True"/>
+      <proxy proxyaddress="proxyAddress" usesystemdefault="true"/>
     </defaultProxy>
 </system.net>
 {% endhighlight %}
