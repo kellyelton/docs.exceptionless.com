@@ -19,7 +19,7 @@ elements.  It should look like this:
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
   <configSections>
-    <section name="exceptionless" type="Exceptionless.Configuration.ExceptionlessSection, Exceptionless" />
+    <section name="exceptionless" type="Exceptionless.Configuration.ExceptionlessSection, Exceptionless" requirePermission="false" />
   </configSections>
   <!-- attribute names are cases sensitive, must specify a path that you have write access to -->
   <exceptionless apiKey="API_KEY_HERE" enableLogging="true" logPath="C:\log.txt" />
