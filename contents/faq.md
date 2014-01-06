@@ -23,3 +23,6 @@ A: Set the `enabled` attribute to `false` in the `exceptionless` config section.
 
 ## Q: Is there a minimum version of .NET you need to be targeting to use the Exceptionless client.
 A: Yes, your application needs to be targeting .NET 3.5 or newer.
+
+## Q: Can I use exceptionless under medium trust?
+A: Yes, you will need to set the `requirePermission` attribute to `false` in the `exceptionless` config section. This attribute allows the exceptionless client to read the exceptionless config settings. When you are running in medium trust, unhandled exceptions will not be caught. This means that you must submit exceptions to exceptionless manually. We recommend wiring up to the [global application objects application error handler](http://msdn.microsoft.com/en-us/library/24395wz3(v=vs.100).aspx) and [submitting the errors manually]({{ site.url }}/contents/sendingerrors).
