@@ -139,3 +139,26 @@ One config setting built into Exceptionless can be used to include the last X tr
 using Exceptionless.Configuration;
 [assembly: ExceptionlessSetting(ClientConfiguration.TraceLogLimitKey, "10")]
 {% endhighlight %}
+
+## Adding static extended data values with every report
+
+You can have the Exceptionless client automatically add extended data values to every report that it submits like this:
+
+{% highlight xml %}
+<exceptionless apiKey="YOUR_API_KEY">
+    <extendedData>
+      <add name="Data1" value="Exceptionless"/>
+      <add name="Data2" value="10"/>
+      <add name="Data3" value="true"/>
+      <add name="Data4" value="{ 'Property1': 'Exceptionless', 'Property2: 10, 'Property3': true }"/>
+    </extendedData>
+</exceptionless>
+{% endhighlight %}
+
+## Adding custom tags with every report
+
+You can have the Exceptionless client automatically add specific tags to every report that it submits like this:
+
+{% highlight xml %}
+<exceptionless apiKey="YOUR_API_KEY" tags="Tag1,Tag2" />
+{% endhighlight %}
