@@ -21,6 +21,17 @@ A: Exceptionless queues all error submissions to disk and will retry them later.
 ## Q: How can I disable error reporting during testing?
 A: Set the `enabled` attribute to `false` in the `exceptionless` config section.
 
+## Q: Can I send log messages along with my error reports?
+A: Yes, you can have Exceptionless automatically include the last X trace log messages with each error report using the `TraceLogLimit` config setting like this:
+
+{% highlight xml %}
+<exceptionless apiKey="...">
+  <settings>
+    <add name="TraceLogLimit" value="10" />
+  </settings>
+</exceptionless>
+{% endhighlight %}
+
 ## Q: Is there a minimum version of .NET you need to be targeting to use the Exceptionless client.
 A: Yes, your application needs to be targeting .NET 3.5 or newer.
 
