@@ -90,9 +90,39 @@ You can disable Exceptionless from reporting errors during testing using the `En
 [assembly: Exceptionless("YOUR_API_KEY", Enabled="false")]
 {% endhighlight %}
 
+## Custom config settings
+
+Exceptionless allows you to add custom config values to your Exceptionless clients that can be set through the client config section, attributes or remotely on the project settings. These config values can be accessed and used within your app to control things like wether or not to send custom data with your reports. For example, you could have a `IncludeOrderData` flag in your config that you use to control wether or not you add a custom order object to your Exceptionless report data. You can even remotely turn the setting on or off from your project settings. Here is an example of doing that:
+
+{% highlight xml %}
+<exceptionless apiKey="YOUR_API_KEY">
+  <settings>
+    <add name="IncludeOrderData" value="true" />
+  </settings>
+</exceptionless>
+{% endhighlight %}
+
+Or in a config attribute like:
+{% highlight c# %}
+[assembly: ExceptionlessSetting("IncludeOrderData", "true")]
+{% endhighlight %}
+
+Then in your app, you can check the setting and determine if you should include the order data or not:
+
+{% highlight c# %}
+try {
+  ...
+} catch (Exception ex) {
+  var report = ex.ToExceptionless();
+  if (ExceptionlessClient.Current.Configuration["Blah"] == "true")
+      report.AddObject(order);
+  report.Submit();
+}
+{% endhighlight %}
+
 ## Enabling trace message collection
 
-An error report may also contain trace messages that were written before the error occurred. You can enable this setting by specifying a `TraceLogLimit` setting with a value greater than 0. This value is the maxiumum number of trace messages that will be submitted with the error report.
+One config setting built into Exceptionless can be used to include the last X trace log messages with your error reports. You can enable this setting by specifying a `TraceLogLimit` setting with a value greater than 0. This value is the maxiumum number of trace messages that will be submitted with the error report.
 ### Configuration file
 
 {% highlight xml %}
