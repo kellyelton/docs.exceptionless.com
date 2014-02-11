@@ -2,7 +2,7 @@
 layout: docs
 edit_path: troubleshooting
 title: Troubleshooting
-prev_section: sendingerrors
+prev_section: security
 next_section: faq
 permalink: /contents/troubleshooting/
 ---
