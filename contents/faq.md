@@ -13,7 +13,7 @@ A: Exceptionless queues all error submissions to disk and then processes them in
 everything we can to make sure that we do not slow your app down or crash your app.
 
 ## Q: Can I reset my error data?
-A: You can reset your error data by going into the manage project page and clicking the `Delete All Project Data` button.
+A: You can reset your error data at the project level by going into the manage project page and clicking the `Delete All Project Data` button. You can also reset all error data for a specific error stack by going to the error stack page, clicking the `Options` button and clicking `Reset Stats`.
 
 ## Q: What happens if my internet connection goes down?
 A: Exceptionless queues all error submissions to disk and will retry them later.
