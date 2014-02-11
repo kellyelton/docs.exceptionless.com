@@ -11,7 +11,7 @@ Exceptionless follows industry best practices and uses SSL out of the box to be 
 
 ## Data Exclusions
 
-A comma delimited list of field names that should be removed from any error report data (e.g., extended data properties, form fields, cookies and query parameters). Data Exclusions can be configured on the project settings page. You can also specify a field name with a wildcard `*` to specify starts with, ends with, or contains just to be extra safe.
+A comma delimited list of field names that should be removed from any error report data (e.g., extended data properties, form fields, cookies and query parameters). Data Exclusions can be configured on the project settings page. You can also specify a field name with wildcards `*` to specify starts with, ends with, or contains just to be extra safe.
 
 ### Example usage:
 1. Entering `Password` will remove any field **named** `Password` from the report.
