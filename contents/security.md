@@ -4,7 +4,7 @@ edit_path: security
 title: Security
 prev_section: sendingerrors
 next_section: troubleshooting
-permalink: /contents/configuration/
+permalink: /contents/security/
 ---
 
 Exceptionless follows industry best practices and uses SSL out of the box to be as secure as possible. We provide you with the tools to take your information secruity to the next level.
