@@ -101,3 +101,5 @@ public class NLogExceptionlessLog : IExceptionlessLog {
 }
 {% endhighlight %}
 
+## Debugging the source code
+You can also debug the Exceptionless NuGet packages by configuring the Visual Studio source server integration. Please follow the [Symbol Source documentation](http://www.symbolsource.org/Public/Home/VisualStudio) on configuring Visual Studio.
