@@ -38,7 +38,7 @@ A: Yes, your application needs to be targeting .NET 3.5 or newer.
 ## Q: Can I use Exceptionless under medium trust?
 A: Yes, you will need to set the `requirePermission` attribute to `false` in the `exceptionless` config section. This attribute allows the exceptionless client to read the exceptionless config settings. When you are running in medium trust, unhandled exceptions will not be caught. This means that you must [submit exceptions]({{ site.url }}/contents/sendingerrors) to Exceptionless manually.
 
-## Q: Can I use my own domain for reporting errors?
+## Q: Can I use my own domain nanme for reporting errors to exceptionless.com?
 A: Yes, you can simply create a CNAME record that points to `collector.exceptionless.com` and then change the Exceptionless client to use the alias that you created like this:
 
 {% highlight xml %}
