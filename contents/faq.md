@@ -12,6 +12,9 @@ Here are some answers to frequently asked questions about the Exceptionless serv
 A: Exceptionless queues all error submissions to disk and then processes them in a background thread. We do
 everything we can to make sure that we do not slow your app down or crash your app.
 
+## Q: What will happen if my application throws a bunch of exceptions in a very short amount of time?
+A: Exceptionless will intelligently try to ensure that the right amount of data is sent in. First, the client will ensure that the same error occurrence isn't submitted repeatedly by multiple error handlers within a very small window of time (E.G., Two seconds). Finally, in some cases the server logic will step in to remove error occurrences that it feels are spam. For example: Your site might be scanned by a bot and throw a bunch of unique 404 errors. Our system will see all of these within a small window of time submitted by a specific IP address. Once it hits a configurable threshold of error occurrences within a specific amount of time, these error occurrences will be removed from the system.
+
 ## Q: Can I reset my error data?
 A: You can reset your error data at the project level by going into the manage project page and clicking the `Delete All Project Data` button. You can also reset all error data for a specific error stack by going to the error stack page, clicking the `Options` button and clicking `Reset Stats`.
 
