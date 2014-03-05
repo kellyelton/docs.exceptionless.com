@@ -9,5 +9,8 @@ permalink: /contents/gettingstarted/
 
 In order to get started with Exceptionless, follow these steps:
 
-* [Create an account](https://exceptionless.com/signup)
-* Create a new project
+* [Create an account](https://app.exceptionless.com/signup)
+* When you signup, you will be prompted to create your first project.
+* [Configure your application](https://app.exceptionless.com/project/configure) by following the instructions on the configure project page.
+* Your application will now automatically send all unhandled errors to the Exceptionless service.
+* You can also [send handled errors](sendingerrors) along with additional information.
