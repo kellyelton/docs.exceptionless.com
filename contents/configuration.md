@@ -87,7 +87,7 @@ You can disable Exceptionless from reporting errors during testing using the `En
 ### Attribute
 
 {% highlight c# %}
-[assembly: Exceptionless("YOUR_API_KEY", Enabled="false")]
+[assembly: Exceptionless("YOUR_API_KEY", Enabled=false)]
 {% endhighlight %}
 
 ## Custom config settings
