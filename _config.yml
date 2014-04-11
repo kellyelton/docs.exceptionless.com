@@ -1,4 +1,5 @@
 pygments: true
 relative_permalinks: false
+markdown: kramdown
 google_analytics_id: UA-433340-8
 permalink: /news/:year/:month/:day/:title
