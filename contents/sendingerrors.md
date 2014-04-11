@@ -12,7 +12,7 @@ Once configured, Exceptionless will automatically send any unhandled exceptions 
 ## Manually Sending Errors
 
 In addition to automatically sending all unhandled exceptions, you may want to manually send exceptions to the service.
-You can do so using code like this:
+You can do so by importing the Exceptionless namespace and using code like this:
 
 {% highlight c# %}
 try {
