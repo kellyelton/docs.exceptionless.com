@@ -162,3 +162,20 @@ You can have the Exceptionless client automatically add specific tags to every r
 {% highlight xml %}
 <exceptionless apiKey="YOUR_API_KEY" tags="Tag1,Tag2" />
 {% endhighlight %}
+
+
+## Self hosted options
+The Exceptionless client can also be configured to send data to your self hosted instance. This is configured by setting the `serverUrl` setting to point to your exceptionless instance. Please note that if you do not have SSL configured you
+must set the `enableSSL` setting to `false`.
+
+### Configuration file
+
+{% highlight xml %}
+<exceptionless apiKey="YOUR_API_KEY" serverUrl="http://localhost" enableSSL="false" />
+{% endhighlight %}
+
+### Attribute
+
+{% highlight c# %}
+[assembly: Exceptionless("YOUR_API_KEY", ServerUrl = "http://localhost", EnableSSL = false)]
+{% endhighlight %}
