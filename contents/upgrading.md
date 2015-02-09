@@ -6,7 +6,7 @@ prev_section: faq
 permalink: /contents/upgrading/
 ---
 
-#Upgrading from all previous versions of Exceptionless
+##Upgrading from all previous versions of Exceptionless
 Please read this guide when upgrading from any version of Exceptionless.
 
 1. Open the NuGet Package Manager dialog.
@@ -16,6 +16,6 @@ Please read this guide when upgrading from any version of Exceptionless.
 
 For more information please see the official [NuGet documentation](https://docs.nuget.org/consume/Package-Manager-Dialog).
 
-#Upgrading from Exceptionless 1.x
+##Upgrading from Exceptionless 1.x
 
 Please read this guide when upgrading from Exceptionless 1.x. The Exceptionless latest client has a few breaking changes from 1.x client that users users should be aware of when upgrading. Please follow the guide below after upgrading your NuGet packages from version 1.x to the latest version.
