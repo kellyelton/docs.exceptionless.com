@@ -3,7 +3,6 @@ layout: docs
 edit_path: faq
 title: Frequently Asked Questions
 prev_section: troubleshooting
-next_section: upgrading
 permalink: /contents/faq/
 ---
 
