@@ -14,110 +14,6 @@ A: Yes, you need to suffix your query with a *
 ## Q: What fields can I search on?
 A: 
 
-####Stacks
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>Term</th>
-      <th>Example</th>
-      <th>field is optional (field:term)</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">organization</th>
-      <td><code>organization:54d8315ce6bb2d0500bcc7b4</code></td>
-      <td>false</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row">project</th>
-      <td><code>project:54d8315ce6bb2d0500bcc7b4</code></td>
-      <td>false</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row">type</th>
-      <td><code>type:error</code></td>
-      <td>false</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row">first</th>
-      <td><code>first:date</code></td>
-      <td>false</td>
-      <td>first occurrence date</td>
-    </tr>
-    <tr>
-      <th scope="row">last</th>
-      <td><code>last:date</code></td>
-      <td>false</td>
-      <td>last occurrence date</td>
-    </tr>
-    <tr>
-      <th scope="row">title</th>
-      <td><code>title:"My Custom Log message"</code> or <code>"My Custom Log message"</code></td>
-      <td>true</td>
-      <td>The title of the stack</td>
-    </tr>
-    <tr>
-      <th scope="row">description</th>
-      <td><code>description:"My description"</code> or <code>"My Description"</code></td>
-      <td>true</td>
-      <td>The stack description</td>
-    </tr>
-    <tr>
-      <th scope="row">tag</th>
-      <td><code>tag:critical</code> or <code>critical</code></td>
-      <td>true</td>
-      <td>The stacks tags</td>
-    </tr>
-    <tr>
-      <th scope="row">links</th>
-      <td><code>links:"http://exceptionless.io"</code> or <code>"http://exceptionless.io"</code></td>
-      <td>true</td>
-      <td>The stacks reference links</td>
-    </tr>
-    <tr>
-      <th scope="row">fixedon</th>
-      <td><code>fixedon:date</code></td>
-      <td>false</td>
-      <td>The date the stack was marked as fixed</td>
-    </tr>
-    <tr>
-      <th scope="row">fixed</th>
-      <td><code>fixed:true</code></td>
-      <td>false</td>
-      <td>The field will be set to true if the stack is marked as fixed</td>
-    </tr>
-    <tr>
-      <th scope="row">hidden</th>
-      <td><code>hidden:true</code></td>
-      <td>false</td>
-      <td>The field will be set to true if the stack is marked as hidden</td>
-    </tr>
-    <tr>
-      <th scope="row">regressed</th>
-      <td><code>regressed:true</code></td>
-      <td>false</td>
-      <td>The field will be set to true if the stack is marked as regressed</td>
-    </tr>
-    <tr>
-      <th scope="row">critical</th>
-      <td><code>critical:true</code></td>
-      <td>false</td>
-      <td>The field will be set to true if the stack is marked as critical</td>
-    </tr>
-    <tr>
-      <th scope="row">occurrences</th>
-      <td><code>occurrences:50</code></td>
-      <td>false</td>
-      <td>The stacks total occurrences</td>
-    </tr>
-  </tbody>
-</table>
-
 ####Events
 <table class="table table-bordered">
   <thead>
@@ -129,6 +25,12 @@ A:
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <th scope="row">id</th>
+      <td><code>id:54d8315ce6bb2d0500bcc7b4</code></td>
+      <td>false</td>
+      <td></td>
+    </tr>
     <tr>
       <th scope="row">organization</th>
       <td><code>organization:54d8315ce6bb2d0500bcc7b4</code></td>
@@ -344,6 +246,117 @@ A:
       <td><code>user.email:"support@exceptionless.io"</code> or <code>"support@exceptionless.io"</code></td>
       <td>true</td>
       <td></td>
+    </tr>
+  </tbody>
+</table>
+
+
+####Stacks
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>Example</th>
+      <th>field is optional (field:term)</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">id</th>
+      <td><code>id:54d8315ce6bb2d0500bcc7b4</code></td>
+      <td>false</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">organization</th>
+      <td><code>organization:54d8315ce6bb2d0500bcc7b4</code></td>
+      <td>false</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">project</th>
+      <td><code>project:54d8315ce6bb2d0500bcc7b4</code></td>
+      <td>false</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">type</th>
+      <td><code>type:error</code></td>
+      <td>false</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">first</th>
+      <td><code>first:date</code></td>
+      <td>false</td>
+      <td>first occurrence date</td>
+    </tr>
+    <tr>
+      <th scope="row">last</th>
+      <td><code>last:date</code></td>
+      <td>false</td>
+      <td>last occurrence date</td>
+    </tr>
+    <tr>
+      <th scope="row">title</th>
+      <td><code>title:"My Custom Log message"</code> or <code>"My Custom Log message"</code></td>
+      <td>true</td>
+      <td>The title of the stack</td>
+    </tr>
+    <tr>
+      <th scope="row">description</th>
+      <td><code>description:"My description"</code> or <code>"My Description"</code></td>
+      <td>true</td>
+      <td>The stack description</td>
+    </tr>
+    <tr>
+      <th scope="row">tag</th>
+      <td><code>tag:critical</code> or <code>critical</code></td>
+      <td>true</td>
+      <td>The stacks tags</td>
+    </tr>
+    <tr>
+      <th scope="row">links</th>
+      <td><code>links:"http://exceptionless.io"</code> or <code>"http://exceptionless.io"</code></td>
+      <td>true</td>
+      <td>The stacks reference links</td>
+    </tr>
+    <tr>
+      <th scope="row">fixedon</th>
+      <td><code>fixedon:date</code></td>
+      <td>false</td>
+      <td>The date the stack was marked as fixed</td>
+    </tr>
+    <tr>
+      <th scope="row">fixed</th>
+      <td><code>fixed:true</code></td>
+      <td>false</td>
+      <td>The field will be set to true if the stack is marked as fixed</td>
+    </tr>
+    <tr>
+      <th scope="row">hidden</th>
+      <td><code>hidden:true</code></td>
+      <td>false</td>
+      <td>The field will be set to true if the stack is marked as hidden</td>
+    </tr>
+    <tr>
+      <th scope="row">regressed</th>
+      <td><code>regressed:true</code></td>
+      <td>false</td>
+      <td>The field will be set to true if the stack is marked as regressed</td>
+    </tr>
+    <tr>
+      <th scope="row">critical</th>
+      <td><code>critical:true</code></td>
+      <td>false</td>
+      <td>The field will be set to true if the stack is marked as critical</td>
+    </tr>
+    <tr>
+      <th scope="row">occurrences</th>
+      <td><code>occurrences:50</code></td>
+      <td>false</td>
+      <td>The stacks total occurrences</td>
     </tr>
   </tbody>
 </table>
