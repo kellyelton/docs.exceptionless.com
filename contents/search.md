@@ -8,6 +8,9 @@ permalink: /contents/search/
 
 Here are some answers to frequently asked questions about Search.
 
+## Q: Can I search by a wild card?
+A: Yes, you need to prefix or suffix your query with a *
+
 ## Q: What fields can I search on?
 A: 
 
