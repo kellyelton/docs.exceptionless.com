@@ -27,91 +27,91 @@ A:
   <tbody>
     <tr>
       <th scope="row">organization</th>
-      <td>`organization:54d8315ce6bb2d0500bcc7b4`</td>
+      <td><code>organization:54d8315ce6bb2d0500bcc7b4</code></td>
       <td>false</td>
       <td></td>
     </tr>
     <tr>
       <th scope="row">project</th>
-      <td>`project:54d8315ce6bb2d0500bcc7b4`</td>
+      <td><code>project:54d8315ce6bb2d0500bcc7b4</code></td>
       <td>false</td>
       <td></td>
     </tr>
     <tr>
       <th scope="row">type</th>
-      <td>`type:error`</td>
+      <td><code>type:error</code></td>
       <td>false</td>
       <td></td>
     </tr>
     <tr>
       <th scope="row">first</th>
-      <td>`first:date`</td>
+      <td><code>first:date</code></td>
       <td>false</td>
       <td>first occurrence date</td>
     </tr>
     <tr>
       <th scope="row">last</th>
-      <td>`last:date`</td>
+      <td><code>last:date</code></td>
       <td>false</td>
       <td>last occurrence date</td>
     </tr>
     <tr>
       <th scope="row">title</th>
-      <td>`title:"My Custom Log message"` or `"My Custom Log message"`</td>
+      <td><code>title:"My Custom Log message"</code> or <code>"My Custom Log message"</code></td>
       <td>true</td>
       <td>The title of the stack</td>
     </tr>
     <tr>
       <th scope="row">description</th>
-      <td>`description:"My description"` or `"My Description"`</td>
+      <td><code>description:"My description"</code> or <code>"My Description"</code></td>
       <td>true</td>
       <td>The stack description</td>
     </tr>
     <tr>
       <th scope="row">tag</th>
-      <td>`tag:critical` or `critical`</td>
+      <td><code>tag:critical</code> or <code>critical</code></td>
       <td>true</td>
       <td>The stacks tags</td>
     </tr>
     <tr>
       <th scope="row">links</th>
-      <td>`links:"http://exceptionless.io"` or `"http://exceptionless.io"`</td>
+      <td><code>links:"http://exceptionless.io"</code> or <code>"http://exceptionless.io"</code></td>
       <td>true</td>
       <td>The stacks reference links</td>
     </tr>
     <tr>
       <th scope="row">fixedon</th>
-      <td>`fixedon:date`</td>
+      <td><code>fixedon:date</code></td>
       <td>false</td>
       <td>The date the stack was marked as fixed</td>
     </tr>
     <tr>
       <th scope="row">fixed</th>
-      <td>`fixed:true`</td>
+      <td><code>fixed:true</code></td>
       <td>false</td>
       <td>The field will be set to true if the stack is marked as fixed</td>
     </tr>
     <tr>
       <th scope="row">hidden</th>
-      <td>`hidden:true`</td>
+      <td><code>hidden:true</code></td>
       <td>false</td>
       <td>The field will be set to true if the stack is marked as hidden</td>
     </tr>
     <tr>
       <th scope="row">regressed</th>
-      <td>`regressed:true`</td>
+      <td><code>regressed:true</code></td>
       <td>false</td>
       <td>The field will be set to true if the stack is marked as regressed</td>
     </tr>
     <tr>
       <th scope="row">critical</th>
-      <td>`critical:true`</td>
+      <td><code>critical:true</code></td>
       <td>false</td>
       <td>The field will be set to true if the stack is marked as critical</td>
     </tr>
     <tr>
       <th scope="row">occurrences</th>
-      <td>`occurrences:50`</td>
+      <td><code>occurrences:50</code></td>
       <td>false</td>
       <td>The stacks total occurrences</td>
     </tr>
@@ -131,217 +131,217 @@ A:
   <tbody>
     <tr>
       <th scope="row">organization</th>
-      <td>`organization:54d8315ce6bb2d0500bcc7b4`</td>
+      <td><code>organization:54d8315ce6bb2d0500bcc7b4</code></td>
       <td>false</td>
       <td></td>
     </tr>
     <tr>
       <th scope="row">project</th>
-      <td>`project:54d8315ce6bb2d0500bcc7b4`</td>
+      <td><code>project:54d8315ce6bb2d0500bcc7b4</code></td>
       <td>false</td>
       <td></td>
     </tr>
     <tr>
       <th scope="row">stack</th>
-      <td>`stack:54d8315ce6bb2d0500bcc7b4`</td>
+      <td><code>stack:54d8315ce6bb2d0500bcc7b4</code></td>
       <td>false</td>
       <td></td>
     </tr>
     <tr>
       <th scope="row">reference</th>
-      <td>`reference:12345678`</td>
+      <td><code>reference:12345678</code></td>
       <td>false</td>
       <td>The reference id</td>
     </tr>
     <tr>
       <th scope="row">session</th>
-      <td>`session:12345678`</td>
+      <td><code>session:12345678</code></td>
       <td>false</td>
       <td>The session id</td>
     </tr>
     <tr>
       <th scope="row">type</th>
-      <td>`type:error`</td>
+      <td><code>type:error</code></td>
       <td>false</td>
       <td></td>
     </tr>
     <tr>
       <th scope="row">source</th>
-      <td>`source:"my lof source"` or `"my log source"`</td>
+      <td><code>source:"my lof source"</code> or <code>"my log source"</code></td>
       <td>true</td>
       <td></td>
     </tr>
     <tr>
       <th scope="row">date</th>
-      <td>`date:date`</td>
+      <td><code>date:date</code></td>
       <td>false</td>
       <td>The occurrence date</td>
     </tr>
     <tr>
       <th scope="row">message</th>
-      <td>`message:"My error message"` or `"My error message"`</td>
+      <td><code>message:"My error message"</code> or <code>"My error message"</code></td>
       <td>true</td>
       <td>The message of the error</td>
     </tr>
     <tr>
       <th scope="row">tag</th>
-      <td>`tag:critical` or `critical`</td>
+      <td><code>tag:critical</code> or <code>critical</code></td>
       <td>true</td>
       <td>The stacks tags</td>
     </tr>
     <tr>
       <th scope="row">geo</th>
-      <td>`geo:coordinates`</td>
+      <td><code>geo:coordinates</code></td>
       <td>false</td>
       <td>The geo location that the event occurrend in</td>
     </tr>
     <tr>
       <th scope="row">value</th>
-      <td>`value:1`</td>
+      <td><code>value:1</code></td>
       <td>false</td>
       <td>The value associated to the event</td>
     </tr>
     <tr>
       <th scope="row">first</th>
-      <td>`first:true`</td>
+      <td><code>first:true</code></td>
       <td>false</td>
       <td>returns all the first occurrences</td>
     </tr>
     <tr>
       <th scope="row">fixed</th>
-      <td>`fixed:true`</td>
+      <td><code>fixed:true</code></td>
       <td>false</td>
       <td>The field will be set to true if the stack is marked as fixed</td>
     </tr>
     <tr>
       <th scope="row">hidden</th>
-      <td>`hidden:true`</td>
+      <td><code>hidden:true</code></td>
       <td>false</td>
       <td>The field will be set to true if the stack is marked as hidden</td>
     </tr>
     <tr>
       <th scope="row">version</th>
-      <td>`version:1` or `version:1.0` or `version:1.0.0`</td>
+      <td><code>version:1</code> or <code>version:1.0</code> or <code>version:1.0.0</code></td>
       <td>false</td>
       <td>The version of the app that created this event</td>
     </tr>
     <tr>
       <th scope="row">hidden</th>
-      <td>`hidden:true`</td>
+      <td><code>hidden:true</code></td>
       <td>false</td>
       <td>The field will be set to true if the stack is marked as hidden</td>
     </tr>
     <tr>
       <th scope="row">machine</th>
-      <td>`machine:Server` or `Server`</td>
+      <td><code>machine:Server</code> or <code>Server</code></td>
       <td>true</td>
       <td>The machine name that created this event.</td>
     </tr>
     <tr>
       <th scope="row">ip</th>
-      <td>`ip:127.0.0.1` or `127.0.0.1`</td>
+      <td><code>ip:127.0.0.1</code> or <code>127.0.0.1</code></td>
       <td>true</td>
       <td>The IP address of the machine that created this event.</td>
     </tr>
     <tr>
       <th scope="row">architecture</th>
-      <td>`architecture:x64`</td>
+      <td><code>architecture:x64</code></td>
       <td>false</td>
       <td>The machine architecture that created this event.</td>
     </tr>
     <tr>
       <th scope="row">useragent</th>
-      <td>`useragent:IE`</td>
+      <td><code>useragent:IE</code></td>
       <td>false</td>
       <td></td>
     </tr>
     <tr>
       <th scope="row">path</th>
-      <td>`path:"/cart"` or `"/cart"`</td>
+      <td><code>path:"/cart"</code> or <code>"/cart"</code></td>
       <td>true</td>
       <td>The url path that this event occurred on</td>
     </tr>
     <tr>
       <th scope="row">browser</th>
-      <td>`browser:Chrome`</td>
+      <td><code>browser:Chrome</code></td>
       <td>false</td>
       <td>The browser</td>
     </tr>
     <tr>
       <th scope="row">browser.version</th>
-      <td>`browser.version:50.0`</td>
+      <td><code>browser.version:50.0</code></td>
       <td>false</td>
       <td>The browser version</td>
     </tr>
     <tr>
       <th scope="row">browser.major</th>
-      <td>`browser.major:50`</td>
+      <td><code>browser.major:50</code></td>
       <td>false</td>
       <td>The browser major version</td>
     </tr>
     <tr>
       <th scope="row">device</th>
-      <td>`device:iPhone`</td>
+      <td><code>device:iPhone</code></td>
       <td>false</td>
       <td></td>
     </tr>
     <tr>
       <th scope="row">os</th>
-      <td>`os:"iOS 8"`</td>
+      <td><code>os:"iOS 8"</code></td>
       <td>false</td>
       <td>The operating system</td>
     </tr>
     <tr>
       <th scope="row">os.version</th>
-      <td>`os.version:8.0`</td>
+      <td><code>os.version:8.0</code></td>
       <td>false</td>
       <td>The operating system version</td>
     </tr>
     <tr>
       <th scope="row">os.major</th>
-      <td>`os.major:8`</td>
+      <td><code>os.major:8</code></td>
       <td>false</td>
       <td>The operating system major version</td>
     </tr>
     <tr>
       <th scope="row">bot</th>
-      <td>`bot:true`</td>
+      <td><code>bot:true</code></td>
       <td>false</td>
       <td></td>
     </tr>
     <tr>
       <th scope="row">error.code</th>
-      <td>`error.code:500` or `500`</td>
+      <td><code>error.code:500</code> or <code>500</code></td>
       <td>true</td>
       <td></td>
     </tr>
     <tr>
       <th scope="row">error.message</th>
-      <td>`error.message:"A NullReferenceException occurred"` or `"A NullReferenceException occurred"`</td>
+      <td><code>error.message:"A NullReferenceException occurred"</code> or <code>"A NullReferenceException occurred"</code></td>
       <td>true</td>
       <td></td>
     </tr>
     <tr>
       <th scope="row">error.type</th>
-      <td>`error.type:"System.NullReferenceException"` or `"System.NullReferenceException"`</td>
+      <td><code>error.type:"System.NullReferenceException"</code> or <code>"System.NullReferenceException"</code></td>
       <td>true</td>
       <td></td>
     </tr>
     <tr>
       <th scope="row">user</th>
-      <td>`user:"random user identifier"` or `"random user identifier"`</td>
+      <td><code>user:"random user identifier"</code> or <code>"random user identifier"</code></td>
       <td>true</td>
       <td>The identity assigned to the event.</td>
     </tr>
     <tr>
       <th scope="row">user.description</th>
-      <td>`user.description:"I clicked the button"` or `"I clicked the button"`</td>
+      <td><code>user.description:"I clicked the button"</code> or <code>"I clicked the button"</code></td>
       <td>true</td>
       <td></td>
     </tr>
     <tr>
       <th scope="row">user.email</th>
-      <td>`user.email:"support@exceptionless.io"` or `"support@exceptionless.io"`</td>
+      <td><code>user.email:"support@exceptionless.io"</code> or <code>"support@exceptionless.io"</code></td>
       <td>true</td>
       <td></td>
     </tr>
