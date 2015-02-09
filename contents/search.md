@@ -20,7 +20,7 @@ A:
     <tr>
       <th>Term</th>
       <th>Example</th>
-      <th>Included In All</th>
+      <th>field is optional (field:term)</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -124,7 +124,7 @@ A:
     <tr>
       <th>Term</th>
       <th>Example</th>
-      <th>Included In All</th>
+      <th>field is optional (field:term)</th>
       <th>Description</th>
     </tr>
   </thead>
