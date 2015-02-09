@@ -216,5 +216,131 @@ A:
       <td>false</td>
       <td>The field will be set to true if the stack is marked as hidden</td>
     </tr>
+    <tr>
+      <th scope="row">version</th>
+      <td>version:1 or version:1.0 or version:1.0.0</td>
+      <td>false</td>
+      <td>The version of the app that created this event</td>
+    </tr>
+    <tr>
+      <th scope="row">hidden</th>
+      <td>hidden:true</td>
+      <td>false</td>
+      <td>The field will be set to true if the stack is marked as hidden</td>
+    </tr>
+    <tr>
+      <th scope="row">machine</th>
+      <td>machine:"Server" or "Server"</td>
+      <td>true</td>
+      <td>The machine name that created this event.</td>
+    </tr>
+    <tr>
+      <th scope="row">ip</th>
+      <td>ip:127.0.0.1 or 127.0.0.1</td>
+      <td>true</td>
+      <td>The IP address of the machine that created this event.</td>
+    </tr>
+    <tr>
+      <th scope="row">architecture</th>
+      <td>architecture:x64</td>
+      <td>false</td>
+      <td>The machine architecture that created this event.</td>
+    </tr>
+    <tr>
+      <th scope="row">useragent</th>
+      <td>useragent:IE</td>
+      <td>false</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">path</th>
+      <td>path:"/cart" or "/cart"</td>
+      <td>true</td>
+      <td>The url path that this event occurred on</td>
+    </tr>
+    <tr>
+      <th scope="row">browser</th>
+      <td>browser:"Chrome" or browser:"Chrome 50"</td>
+      <td>false</td>
+      <td>The browser</td>
+    </tr>
+    <tr>
+      <th scope="row">browser.version</th>
+      <td>browser.version:50.0</td>
+      <td>false</td>
+      <td>The browser version</td>
+    </tr>
+    <tr>
+      <th scope="row">browser.major</th>
+      <td>browser.major:50</td>
+      <td>false</td>
+      <td>The browser major version</td>
+    </tr>
+    <tr>
+      <th scope="row">device</th>
+      <td>device:iPhone</td>
+      <td>false</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">os</th>
+      <td>os:"iOS 8"</td>
+      <td>false</td>
+      <td>The operating system</td>
+    </tr>
+    <tr>
+      <th scope="row">os.version</th>
+      <td>os.version:8.0</td>
+      <td>false</td>
+      <td>The operating system version</td>
+    </tr>
+    <tr>
+      <th scope="row">os.major</th>
+      <td>os.major:8</td>
+      <td>false</td>
+      <td>The operating system major version</td>
+    </tr>
+    <tr>
+      <th scope="row">bot</th>
+      <td>bot:true</td>
+      <td>false</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">error.code</th>
+      <td>error.code:500 or 500</td>
+      <td>true</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">error.message</th>
+      <td>error.message:"A NullReferenceException occurred" or "A NullReferenceException occurred"</td>
+      <td>true</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">error.type</th>
+      <td>error.type:"System.NullReferenceException" or "System.NullReferenceException"</td>
+      <td>true</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">user</th>
+      <td>user:"random user identifier" or "random user identifier"</td>
+      <td>true</td>
+      <td>The identity assigned to the event.</td>
+    </tr>
+    <tr>
+      <th scope="row">user.description</th>
+      <td>user.description:"I clicked the button" or "I clicked the button"</td>
+      <td>true</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">user.email</th>
+      <td>user.email:"support@exceptionless.io" or "support@exceptionless.io"</td>
+      <td>true</td>
+      <td></td>
+    </tr>
   </tbody>
 </table>
