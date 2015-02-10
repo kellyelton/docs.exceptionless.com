@@ -45,10 +45,11 @@ private static void OnSubmittingEvent(object sender, EventSubmittingEventArgs e)
 {% endhighlight %} 
 
 ### Xml configuration changes
+**These changes will be automatically upgraded by our NuGet installer**
 1. `queuePath` has been renamed to `storagePath` 
 2. `extendedData` has been renamed to `data`.
 
-#### Overview
+##### Overview
   {% highlight xml %}
   <exceptionless apiKey="YOUR_API_KEY_HERE" storagePath="|DataDirectory|\Queue">
     <data>
@@ -59,7 +60,11 @@ private static void OnSubmittingEvent(object sender, EventSubmittingEventArgs e)
 
 ### Attribute configuration changes
 1. `QueuePath` has been renamed to `StoragePath`.
-2. `ExtendedData` has been renamed to `Data`.
-3. `ExceptionlessAttribute(string serverUrl, string apiKey, string...)` signature has been changed to `ExceptionlessAttribute(string apiKey, StoragePath = "|DataDirectory|\Queue")`. The new signature uses object initializers.
+2. `ExceptionlessAttribute(string serverUrl, string apiKey, ...)` signature has been changed to `ExceptionlessAttribute(string apiKey)`. The new signature uses object initializers.
  
+##### Overview
+{% highlight c# %}
+[assembly: Exceptionless("YOUR_API_KEY_HERE", ServerUrl = "...", StoragePath = "|DataDirectory|\Queue")]
+{% endhighlight %}
+
 *Please contact support for assistance on updating any undocumented upgrade changes.*
