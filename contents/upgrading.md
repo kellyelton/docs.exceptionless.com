@@ -30,26 +30,27 @@ Please read this guide when upgrading from Exceptionless 1.x. The Exceptionless 
 2. `ErrorBuilder` has been renamed to `EventBuilder`.
 
 #### Events
-1. `event EventHandler<UnhandledExceptionReportingEventArgs> UnhandledExceptionReporting` has been removed and replaced with `event EventHandler<EventSubmittingEventArgs> SubmittingEvent`. You'll need to wire up to `SubmittingEvent` and check the `IsUnhandledError` property. *NOTE: Error has been renamed to Event on the Event Args class.*
-  {% highlight c# %} 
-  ExceptionlessClient.Default.SubmittingEvent += OnSubmittingEvent;
-  
-  private static void OnSubmittingEvent(object sender, EventSubmittingEventArgs e) {
-    if (!e.IsUnhandledError)
-      return;
-  }
-  {% endhighlight %} 
-2. `event EventHandler<SendErrorCompletedEventArgs> SendErrorCompleted` has been removed. To get notified of when an event has been submitted you must implement a custom `ISubmissionClient` and register it with the dependency resolver (Ex. `client.Configuration.Resolver.Register<ISubmissionClient, SubmissionClient>()` ).
-3. `event EventHandler<RequestSendingEventArgs> RequestSending` has been removed. To override how an event is sent you must implement a custom `ISubmissionClient` and register it with the dependency resolver (Ex. `client.Configuration.Resolver.Register<ISubmissionClient, SubmissionClient>()` ).
+1. `event EventHandler<SendErrorCompletedEventArgs> SendErrorCompleted` has been removed. To get notified of when an event has been submitted you must implement a custom `ISubmissionClient` and register it with the dependency resolver (Ex. `client.Configuration.Resolver.Register<ISubmissionClient, SubmissionClient>()` ).
+2. `event EventHandler<RequestSendingEventArgs> RequestSending` has been removed. To override how an event is sent you must implement a custom `ISubmissionClient` and register it with the dependency resolver (Ex. `client.Configuration.Resolver.Register<ISubmissionClient, SubmissionClient>()` ).
+3. `event EventHandler<UnhandledExceptionReportingEventArgs> UnhandledExceptionReporting` has been removed and replaced with `event EventHandler<EventSubmittingEventArgs> SubmittingEvent`. You'll need to wire up to `SubmittingEvent` and check the `IsUnhandledError` property. *NOTE: Error has been renamed to Event on the Event Args class.*
+
+##### Overview
+{% highlight c# %} 
+ExceptionlessClient.Default.SubmittingEvent += OnSubmittingEvent;
+
+private static void OnSubmittingEvent(object sender, EventSubmittingEventArgs e) {
+  if (!e.IsUnhandledError)
+    return;
+}
+{% endhighlight %} 
 
 ### Xml configuration changes
 1. `queuePath` has been renamed to `storagePath` 
-  {% highlight xml %}
-  <exceptionless apiKey="YOUR_API_KEY_HERE" storagePath="|DataDirectory|\Queue" />
-  {% endhighlight %}
 2. `extendedData` has been renamed to `data`.
+
+#### Overview
   {% highlight xml %}
-  <exceptionless apiKey="YOUR_API_KEY_HERE">
+  <exceptionless apiKey="YOUR_API_KEY_HERE" storagePath="|DataDirectory|\Queue">
     <data>
       <add name="SimpleValueFromConfig" value="Exceptionless"/>
     </data>
