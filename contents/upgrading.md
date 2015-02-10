@@ -56,34 +56,34 @@ Please read this guide when upgrading from Exceptionless 1.x. The Exceptionless 
       <td>Attribute and xml configuration attributes have been renamed.</td>
     </tr>
     <tr>
-      <th scope="row"><code>E​xceptionlessAttribute(​s​tring​ serverUrl, s​tring​ apiKey, s​tring​ queuePath, b​ool ​enableSSL, b​ool enableLogging)</code></th>
-      <td><code>​E​xceptionlessAttribute(​s​tring ​apiKey, EnableSSL = true)</code></td>
+      <th scope="row"><code>ExceptionlessAttribute(params)</code></th>
+      <td><code>ExceptionlessAttribute(string apiKey, EnableSSL = true)</code></td>
       <td>Update</td>
       <td>Attribute configuration overloads has been removed in favor of object initializers.</td>
     </tr>
     <tr>
-      <th scope="row"><code>event ​EventHandler<​U​nhandledExceptionReportingEventArgs>​ U​nhandledExceptionReporting</code></th>
-      <td><code>event ​E​ventHandler<​E​ventSubmittingEventArgs> ​S​ubmittingEvent</code></td>
+      <th scope="row"><code>event UnhandledExceptionReporting</code></th>
+      <td><code>event SubmittingEvent</code></td>
       <td>Update</td>
-      <td>Wire up to <code>S​ubmittingEvent</code> and check the IsUnhandledError property. NOTE: Error has been renamed to Event on the Event Args class.</td>
+      <td>Wire up to <code>SubmittingEvent</code> and check the <code>IsUnhandledError</code> property. <i>NOTE: Error has been renamed to Event on the Event Args class.</i></td>
     </tr>
     <tr>
-      <th scope="row"><code>ExceptionlessClient.Current.​G​etLastErrorId()</code></th>
-      <td><code>ExceptionlessClient.Default.G​etLastReferenceId()</code></td>
+      <th scope="row"><code>ExceptionlessClient.Current.GetLastErrorId()</code></th>
+      <td><code>ExceptionlessClient.Default.GetLastReferenceId()</code></td>
       <td>Rename</td>
       <td>This method has been renamed. NOTE: to have a reference id automatically generated you must call <code>ExceptionlessClient.Default.Configuration.UseReferenceIds()</code></td>
     </tr>
     <tr>
-      <th scope="row"><code>event ​EventHandler<​RequestSendingEventArgs>​ RequestSending</code></th>
+      <th scope="row"><code>event RequestSending</code></th>
       <td></td>
       <td>Remove</td>
-      <td>Implement custom ISubmissionClient and register it with the dependency resolver.</td>
+      <td>Implement custom <code>ISubmissionClient</code> and register it with the dependency resolver.</td>
     </tr>
     <tr>
-      <th scope="row"><code>event ​EventHandler<​SendErrorCompletedEventArgs>​ SendErrorCompleted</code></th>
+      <th scope="row"><code>event SendErrorCompleted</code></th>
       <td></td>
       <td>Remove</td>
-      <td>Implement custom ISubmissionClient and register it with the dependency resolver.</td>
+      <td>Implement custom <code>ISubmissionClient</code> and register it with the dependency resolver.</td>
     </tr>
   </tbody>
 </table>
