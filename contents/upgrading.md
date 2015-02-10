@@ -37,10 +37,13 @@ Please read this guide when upgrading from Exceptionless 1.x. The Exceptionless 
 ##### Overview
 {% highlight c# %} 
 ExceptionlessClient.Default.SubmittingEvent += OnSubmittingEvent;
-
+...
 private static void OnSubmittingEvent(object sender, EventSubmittingEventArgs e) {
   if (!e.IsUnhandledError)
     return;
+
+  if (e.Event.Message == "Important Exception")
+    e.Event.Tags.Add("Important");
 }
 {% endhighlight %} 
 
