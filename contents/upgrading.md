@@ -45,7 +45,7 @@ private static void OnSubmittingEvent(object sender, EventSubmittingEventArgs e)
 {% endhighlight %} 
 
 ### Xml configuration changes
-**These changes will be automatically upgraded by our NuGet installer**
+**These changes will be automatically upgraded by our NuGet installer.**
 
 1. `queuePath` has been renamed to `storagePath` 
 2. `extendedData` has been renamed to `data`.
