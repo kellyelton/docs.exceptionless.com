@@ -29,7 +29,7 @@ We've created a new NuGet package [Exceptionless.Console](https://www.nuget.org/
 1. `ExceptionlessClient.Current.GetLastErrorId()` has been renamed to `ExceptionlessClient.Default.GetLastReferenceId()`. *NOTE: To have a reference id automatically generated, you must call `ExceptionlessClient.Default.Configuration.UseReferenceIds()`*
 
 ##### Advanced
-The following changes affect a very small portition of users.
+The following changes affect a very small portion of users.
 
 1. `ErrorBuilder Create(Exception)` has been renamed to `EventBuilder CreateEvent()`.
 2. `Error CreateError(Exception)` has been renamed to `void CreateException(Exception)`. *NOTE: This now submits the exception.
@@ -44,7 +44,7 @@ The following changes affect a very small portition of users.
 1. `ExceptionlessClient.Current` has been deprecated and replaced with `ExceptionlessClient.Default`.
 
 ##### Advanced
-The following changes affect a very small portition of users.
+The following changes affect a very small portion of users.
 
 1. `ErrorBuilder` has been renamed to `EventBuilder`.
 2. `IExceptionlessPlugin` has been replaced with `IEventEnrichment`. *NOTE: Enrichments can be registered via  `client.Configuration.AddEnrichment<IEventEnrichment>();`*
@@ -53,7 +53,7 @@ The following changes affect a very small portition of users.
 1. `event EventHandler<UnhandledExceptionReportingEventArgs> UnhandledExceptionReporting` has been removed and replaced with `event EventHandler<EventSubmittingEventArgs> SubmittingEvent`. You'll need to wire up to `SubmittingEvent` and check the `IsUnhandledError` property.
 
 ##### Advanced
-The following changes affect a very small portition of users.
+The following changes affect a very small portion of users.
 
 1. `event EventHandler<SendErrorCompletedEventArgs> SendErrorCompleted` has been removed. To get notified of when an event has been submitted you must implement a custom `ISubmissionClient` and register it with the dependency resolver (Ex. `client.Configuration.Resolver.Register<ISubmissionClient, SubmissionClient>()` ).
 2. `event EventHandler<RequestSendingEventArgs> RequestSending` has been removed. To override how an event is sent you must implement a custom `ISubmissionClient` and register it with the dependency resolver (Ex. `client.Configuration.Resolver.Register<ISubmissionClient, SubmissionClient>()` ).
@@ -85,9 +85,14 @@ private static void OnSubmittingEvent(object sender, EventSubmittingEventArgs e)
 
 1. `queuePath` has been renamed to `storagePath` 
 2. `extendedData` has been renamed to `data`.
+3. The `exceptionless` configuration section has been moved into the `Exceptionless.Extras` assembly. *NOTE: Xml configuration is not available if you are only using the PCL client.*
 
 ##### Overview
 {% highlight xml %}
+<configSections>
+  <section name="exceptionless" type="Exceptionless.ExceptionlessSection, Exceptionless.Extras"/>
+</configSections>
+
 <exceptionless apiKey="YOUR_API_KEY_HERE" storagePath="|DataDirectory|\Queue">
   <data>
     <add name="SimpleValueFromConfig" value="Exceptionless"/>
