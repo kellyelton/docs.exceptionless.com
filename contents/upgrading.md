@@ -32,7 +32,7 @@ We've created a new NuGet package [Exceptionless.Console](https://www.nuget.org/
 The following changes affect a very small portion of users.
 
 1. `ErrorBuilder Create(Exception)` has been renamed to `EventBuilder CreateEvent()`.
-2. `Error CreateError(Exception)` has been renamed to `void CreateException(Exception)`. *NOTE: This now submits the exception.
+2. `Error CreateError(Exception)` has been renamed to `void CreateException(Exception)`. *NOTE: This now submits the exception.*
 3. `SubmitError(Error)` has been renamed to `SubmitEvent(Event)`.
 4. `SubmitError(Exception)` and `Submit(Exception)` has been renamed to `SubmitException(Exception)`.
 5. `ProcessUnhandledException(Exception)` has been renamed to `SubmitUnhandledException(Exception)`.
