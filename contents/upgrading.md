@@ -7,7 +7,7 @@ permalink: /contents/upgrading/
 ---
 
 ##Upgrading from all previous versions of Exceptionless
-Please read this guide when upgrading from any version of Exceptionless.
+Please read this guide when upgrading from any version of Exceptionless. Upgrading is meant to be an easy process. Mostusers will just have to upgrade the NuGet package. If you run into any issues after upgrading the NuGet packages please take a look at the sections below.
 
 1. Open the NuGet Package Manager dialog.
 2. Click on the Updates tab.
@@ -20,19 +20,39 @@ For more information please see the official [NuGet documentation](https://docs.
 
 Please read this guide when upgrading from Exceptionless 1.x. The Exceptionless latest client has a few breaking changes from 1.x client that users users should be aware of when upgrading. Please follow the guide below after upgrading your NuGet packages from version 1.x to the latest version.
 
+### Console and Service users
+We've created a new NuGet package [Exceptionless.Console](https://www.nuget.org/packages/exceptionless.console) that should be used in these scenarios.
+
 ### ExceptionlessClient API changes
 
 #### Methods
 1. `ExceptionlessClient.Current.GetLastErrorId()` has been renamed to `ExceptionlessClient.Default.GetLastReferenceId()`. *NOTE: To have a reference id automatically generated, you must call `ExceptionlessClient.Default.Configuration.UseReferenceIds()`*
 
+##### Advanced
+The following changes affect a very small portition of users.
+
+1. `ErrorBuilder Create(Exception)` has been renamed to `EventBuilder CreateEvent()`.
+2. `Error CreateError(Exception)` has been renamed to `void CreateException(Exception)`. *NOTE: This now submits the exception.
+3. `SubmitError(Error)` has been renamed to `SubmitEvent(Event)`.
+3. `SubmitError(Exception)` and `Submit(Exception)` has been renamed to `SubmitException(Exception)`.
+3. `ProcessUnhandledException(Exception)` has been renamed to `SubmitUnhandledException(Exception)`.
+
 #### Properties
 1. `ExceptionlessClient.Current` has been deprecated and replaced with `ExceptionlessClient.Default`.
-2. `ErrorBuilder` has been renamed to `EventBuilder`.
+
+##### Advanced
+The following changes affect a very small portition of users.
+
+1. `ErrorBuilder` has been renamed to `EventBuilder`.
 
 #### Events
+1. `event EventHandler<UnhandledExceptionReportingEventArgs> UnhandledExceptionReporting` has been removed and replaced with `event EventHandler<EventSubmittingEventArgs> SubmittingEvent`. You'll need to wire up to `SubmittingEvent` and check the `IsUnhandledError` property.
+
+##### Advanced
+The following changes affect a very small portition of users.
+
 1. `event EventHandler<SendErrorCompletedEventArgs> SendErrorCompleted` has been removed. To get notified of when an event has been submitted you must implement a custom `ISubmissionClient` and register it with the dependency resolver (Ex. `client.Configuration.Resolver.Register<ISubmissionClient, SubmissionClient>()` ).
 2. `event EventHandler<RequestSendingEventArgs> RequestSending` has been removed. To override how an event is sent you must implement a custom `ISubmissionClient` and register it with the dependency resolver (Ex. `client.Configuration.Resolver.Register<ISubmissionClient, SubmissionClient>()` ).
-3. `event EventHandler<UnhandledExceptionReportingEventArgs> UnhandledExceptionReporting` has been removed and replaced with `event EventHandler<EventSubmittingEventArgs> SubmittingEvent`. You'll need to wire up to `SubmittingEvent` and check the `IsUnhandledError` property. *NOTE: Error has been renamed to Event on the Event Args class.*
 
 ##### Overview
 {% highlight c# %} 
@@ -46,6 +66,15 @@ private static void OnSubmittingEvent(object sender, EventSubmittingEventArgs e)
     e.Event.Tags.Add("Important");
 }
 {% endhighlight %} 
+
+### Attribute configuration changes
+1. `QueuePath` has been renamed to `StoragePath`.
+2. `ExceptionlessAttribute(string serverUrl, string apiKey, ...)` signature has been changed to `ExceptionlessAttribute(string apiKey)`. The new signature uses object initializers.
+ 
+##### Overview
+{% highlight c# %}
+[assembly: Exceptionless("YOUR_API_KEY_HERE", ServerUrl = "...", StoragePath = "|DataDirectory|\Queue")]
+{% endhighlight %}
 
 ### Xml configuration changes
 **These changes will be automatically upgraded by our NuGet installer.**
@@ -61,14 +90,5 @@ private static void OnSubmittingEvent(object sender, EventSubmittingEventArgs e)
     </data>
   </exceptionless>
   {% endhighlight %}
-
-### Attribute configuration changes
-1. `QueuePath` has been renamed to `StoragePath`.
-2. `ExceptionlessAttribute(string serverUrl, string apiKey, ...)` signature has been changed to `ExceptionlessAttribute(string apiKey)`. The new signature uses object initializers.
- 
-##### Overview
-{% highlight c# %}
-[assembly: Exceptionless("YOUR_API_KEY_HERE", ServerUrl = "...", StoragePath = "|DataDirectory|\Queue")]
-{% endhighlight %}
 
 *Please contact support for assistance on updating any undocumented upgrade changes.*
