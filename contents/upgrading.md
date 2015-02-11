@@ -7,7 +7,7 @@ permalink: /contents/upgrading/
 ---
 
 ##Upgrading from all previous versions of Exceptionless
-Please read this guide when upgrading from any version of Exceptionless. Upgrading is meant to be an easy process. Mostusers will just have to upgrade the NuGet package. If you run into any issues after upgrading the NuGet packages please take a look at the sections below.
+Please read this guide when upgrading from any version of Exceptionless. Upgrading is meant to be an easy process. Most users will just have to upgrade the NuGet package. If you run into any issues after upgrading the NuGet packages please take a look at the sections below.
 
 1. Open the NuGet Package Manager dialog.
 2. Click on the Updates tab.
@@ -18,7 +18,7 @@ For more information please see the official [NuGet documentation](https://docs.
 
 ##Upgrading from Exceptionless 1.x
 
-Please read this guide when upgrading from Exceptionless 1.x. The Exceptionless latest client has a few breaking changes from 1.x client that users users should be aware of when upgrading. Please follow the guide below after upgrading your NuGet packages from version 1.x to the latest version.
+Please read this guide when upgrading from Exceptionless 1.x. The Exceptionless latest client has a few breaking changes from 1.x client that users should be aware of when upgrading. Please follow the guide below after upgrading your NuGet packages from version 1.x to the latest version.
 
 ### Console and Service users
 We've created a new NuGet package [Exceptionless.Console](https://www.nuget.org/packages/exceptionless.console) that should be used in these scenarios.
