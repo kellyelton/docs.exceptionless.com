@@ -79,7 +79,7 @@ A:
     </tr>
     <tr>
       <th scope="row">source</th>
-      <td><code>source:"my lof source"</code> or <code>"my log source"</code></td>
+      <td><code>source:"my log source"</code> or <code>"my log source"</code></td>
       <td>false</td>
       <td>Events</td>
       <td>Event source</td>
