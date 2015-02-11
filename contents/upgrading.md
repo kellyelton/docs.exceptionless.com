@@ -73,7 +73,7 @@ private static void OnSubmittingEvent(object sender, EventSubmittingEventArgs e)
 
 ### Attribute configuration changes
 1. `QueuePath` has been renamed to `StoragePath`.
-2. `ExceptionlessAttribute(string serverUrl, string apiKey, ...)` signature has been changed to `ExceptionlessAttribute(string apiKey)`. The new signature uses object initializers.
+2. `ExceptionlessAttribute(string serverUrl, string apiKey, ...)` signature has been changed to `ExceptionlessAttribute(string apiKey)`.
  
 ##### Overview
 {% highlight c# %}
