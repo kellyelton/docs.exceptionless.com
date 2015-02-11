@@ -7,7 +7,7 @@ permalink: /contents/upgrading/
 ---
 
 ##Upgrading from all previous versions of Exceptionless
-Please read this guide when upgrading from any version of Exceptionless. Upgrading is meant to be an easy process. Most users will just have to upgrade the NuGet package. If you run into any issues after upgrading the NuGet packages please take a look at the sections below.
+Please read this guide when upgrading from any version of Exceptionless. Upgrading is meant to be an easy process. **Most users will just have to upgrade the NuGet package.** If you run into any issues after upgrading the NuGet packages please take a look at the sections below.
 
 1. Open the NuGet Package Manager dialog.
 2. Click on the Updates tab.
