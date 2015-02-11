@@ -34,8 +34,11 @@ The following changes affect a very small portition of users.
 1. `ErrorBuilder Create(Exception)` has been renamed to `EventBuilder CreateEvent()`.
 2. `Error CreateError(Exception)` has been renamed to `void CreateException(Exception)`. *NOTE: This now submits the exception.
 3. `SubmitError(Error)` has been renamed to `SubmitEvent(Event)`.
-3. `SubmitError(Exception)` and `Submit(Exception)` has been renamed to `SubmitException(Exception)`.
-3. `ProcessUnhandledException(Exception)` has been renamed to `SubmitUnhandledException(Exception)`.
+4. `SubmitError(Exception)` and `Submit(Exception)` has been renamed to `SubmitException(Exception)`.
+5. `ProcessUnhandledException(Exception)` has been renamed to `SubmitUnhandledException(Exception)`.
+6. `SubmitPatch(string id, object patch)` has been removed.
+7. `SuspendProcessing()` has been moved to `client.Configuration.Resolver.GetEventQueue().SuspendProcessing()`.
+7. `UpdateConfiguration()` has been moved to `Exceptionless.Configuration.SettingsManager.UpdateSettings(client.Configuration)`.
 
 #### Properties
 1. `ExceptionlessClient.Current` has been deprecated and replaced with `ExceptionlessClient.Default`.
@@ -44,6 +47,7 @@ The following changes affect a very small portition of users.
 The following changes affect a very small portition of users.
 
 1. `ErrorBuilder` has been renamed to `EventBuilder`.
+2. `IExceptionlessPlugin` has been replaced with `IEventEnrichment`. *NOTE: Enrichments can be registered via  `client.Configuration.AddEnrichment<IEventEnrichment>();`*
 
 #### Events
 1. `event EventHandler<UnhandledExceptionReportingEventArgs> UnhandledExceptionReporting` has been removed and replaced with `event EventHandler<EventSubmittingEventArgs> SubmittingEvent`. You'll need to wire up to `SubmittingEvent` and check the `IsUnhandledError` property.
@@ -83,12 +87,12 @@ private static void OnSubmittingEvent(object sender, EventSubmittingEventArgs e)
 2. `extendedData` has been renamed to `data`.
 
 ##### Overview
-  {% highlight xml %}
-  <exceptionless apiKey="YOUR_API_KEY_HERE" storagePath="|DataDirectory|\Queue">
-    <data>
-      <add name="SimpleValueFromConfig" value="Exceptionless"/>
-    </data>
-  </exceptionless>
-  {% endhighlight %}
+{% highlight xml %}
+<exceptionless apiKey="YOUR_API_KEY_HERE" storagePath="|DataDirectory|\Queue">
+  <data>
+    <add name="SimpleValueFromConfig" value="Exceptionless"/>
+  </data>
+</exceptionless>
+{% endhighlight %}
 
-*Please contact support for assistance on updating any undocumented upgrade changes.*
+*Please [contact support](https://github.com/exceptionless/Exceptionless/issues/new) for assistance on updating any undocumented upgrade changes.*
