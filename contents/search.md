@@ -192,7 +192,7 @@ A:
     <tr>
       <th scope="row">version</th>
       <td><code>version:1</code> or <code>version:1.0</code> or <code>version:1.0.0</code></td>
-      <td>false</td>
+      <td>true</td>
       <td>Events</td>
       <td>Application version</td>
     </tr>
