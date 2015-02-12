@@ -313,7 +313,15 @@ A:
       <td><code>user:"random user identifier"</code> or <code>"random user identifier"</code></td>
       <td>false</td>
       <td>Events</td>
-      <td>Identity assigned to the event</td>
+      <td>Uniquely identifies the user.</td>
+    </tr>
+   <tr>
+    <tr>
+      <th scope="row">user.name</th>
+      <td><code>user:"Exceptionless User"</code> or <code>"Exceptionless User"</code></td>
+      <td>false</td>
+      <td>Events</td>
+      <td>Friendly name of the user.</td>
     </tr>
    <tr>
       <th scope="row">description</th>
