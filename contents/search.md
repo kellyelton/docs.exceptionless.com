@@ -86,7 +86,7 @@ A:
     </tr>
     <tr>
       <th scope="row">date</th>
-      <td><code>date:date</code></td>
+      <td><code>date:"2020-10-16T12:00:00.000"</code></td>
       <td>true</td>
       <td>Events</td>
       <td>Occurrence date</td>
@@ -100,14 +100,14 @@ A:
     </tr>
     <tr>
       <th scope="row">first</th>
-      <td><code>first:date</code></td>
+      <td><code>first:"2020-10-16T12:00:00.000"</code></td>
       <td>true</td>
       <td>Stacks</td>
       <td>First occurrence date</td>
     </tr>
     <tr>
       <th scope="row">last</th>
-      <td><code>last:date</code></td>
+      <td><code>last:"2020-10-16T12:00:00.000"</code></td>
       <td>true</td>
       <td>Stacks</td>
       <td>Last occurrence date</td>
@@ -135,7 +135,7 @@ A:
     </tr>
     <tr>
       <th scope="row">tag</th>
-      <td><code>tag:critical</code> or <code>critical</code></td>
+      <td><code>tag:"Blake Niemyjski"</code> or<code>tag:Blake</code> or <code>blake</code></td>
       <td>false</td>
       <td>Events, Stacks</td>
       <td>Tags</td>
@@ -156,7 +156,7 @@ A:
     </tr>
      <tr>
       <th scope="row">fixedon</th>
-      <td><code>fixedon:date</code></td>
+      <td><code>fixedon:"2020-10-16T12:00:00.000"</code></td>
       <td>true</td>
       <td>Stacks</td>
       <td>Date fixed</td>
@@ -226,7 +226,7 @@ A:
     </tr>
     <tr>
       <th scope="row">useragent</th>
-      <td><code>useragent:IE</code></td>
+      <td><code>useragent:IE</code> or <code>useragent:"Mozilla/5.0"</code></td>
       <td>true</td>
       <td>Events</td>
       <td>User Agent</td>
