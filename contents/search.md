@@ -141,13 +141,6 @@ A:
       <td>Tags</td>
     </tr>
     <tr>
-      <th scope="row">geo</th>
-      <td><code>geo:coordinates</code></td>
-      <td>true</td>
-      <td>Events</td>
-      <td>Geo location</td>
-    </tr>
-    <tr>
       <th scope="row">value</th>
       <td><code>value:1</code></td>
       <td>true</td>
