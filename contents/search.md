@@ -329,7 +329,7 @@ A:
     </tr>
     <tr>
       <th scope="row">error.targetmethod</th>
-      <td><code>error.targetmethod:"System.Web.ThreadContext.AssociateWithCurrentThread"</code> or <code>"AssociateWithCurrentThread"</code></td>
+      <td><code>error.targetmethod:AssociateWithCurrentThread</code> or <code>AssociateWithCurrentThread</code></td>
       <td>false</td>
       <td>Events</td>
       <td>Error target method</td>
