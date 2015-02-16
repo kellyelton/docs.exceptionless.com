@@ -14,6 +14,9 @@ A: Yes, all queries separated by a space will be an `AND` operation. If you wish
 ## Q: Can I search by a wild card?
 A: Yes, you need to suffix your query with a *
 
+## Q: Can I search by my custom extended data?
+A: Yes, all simple data types (`string`, `boolean`, `date`, `number`) that are stored in extended data will be indexed. Example: Lets assume that our events extended data contains a property called `age` with a value of `18`. To search for this value our query would be `data.age:18`.
+
 ## Q: What fields can I search on?
 A: 
 
@@ -83,6 +86,13 @@ A:
       <td>false</td>
       <td>Events</td>
       <td>Event source</td>
+    </tr>
+    <tr>
+      <th scope="row">level</th>
+      <td><code>level:Error</code></td>
+      <td>true</td>
+      <td>Events</td>
+      <td>Log level</td>
     </tr>
     <tr>
       <th scope="row">date</th>
@@ -261,7 +271,7 @@ A:
     </tr>
     <tr>
       <th scope="row">os</th>
-      <td><code>os:"iOS 8"</code></td>
+      <td><code>os:iOS</code></td>
       <td>true</td>
       <td>Events</td>
       <td>Operating System</td>
@@ -307,6 +317,20 @@ A:
       <td>false</td>
       <td>Events</td>
       <td>Error type</td>
+    </tr>
+    <tr>
+      <th scope="row">error.targettype</th>
+      <td><code>error.targettype:"System.NullReferenceException"</code> or <code>"System.NullReferenceException"</code></td>
+      <td>false</td>
+      <td>Events</td>
+      <td>Error target type</td>
+    </tr>
+    <tr>
+      <th scope="row">error.targetmethod</th>
+      <td><code>error.targetmethod:"System.Web.ThreadContext.AssociateWithCurrentThread"</code> or <code>"AssociateWithCurrentThread"</code></td>
+      <td>false</td>
+      <td>Events</td>
+      <td>Error target method</td>
     </tr>
     <tr>
       <th scope="row">user</th>
