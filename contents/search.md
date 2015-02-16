@@ -15,7 +15,7 @@ A: Yes, all queries separated by a space will be an `AND` operation. If you wish
 A: Yes, you need to suffix your query with a *
 
 ## Q: Can I search by my custom extended data?
-A: Yes, all simple data types (`string`, `boolean`, `date`, `number`) that are stored in extended data will be indexed. *NOTE: Field names will be lower cased and escaped. If your field contains a space it will be escaped with a `_`.* 
+A: Yes, all simple data types (`string`, `boolean`, `date`, `number`) that are stored in extended data will be indexed. *NOTE: Field names will be lowercased and escaped. If your field contains a space it will be escaped with a `_`.* 
 
 **Example:** Lets assume that our events extended data contains a property called `Age` with a value of `18`. To search for this value our query would be `data.age:18`.
 
