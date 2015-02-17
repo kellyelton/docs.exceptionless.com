@@ -31,14 +31,14 @@ We've created a new NuGet package [Exceptionless.Console](https://www.nuget.org/
 ##### Advanced
 The following changes affect a very small portion of users.
 
-1. `ErrorBuilder Create(Exception)` has been renamed to `EventBuilder CreateEvent()`.
-2. `Error CreateError(Exception)` has been renamed to `void CreateException(Exception)`. *NOTE: This now submits the exception.*
-3. `SubmitError(Error)` has been renamed to `SubmitEvent(Event)`.
-4. `SubmitError(Exception)` and `Submit(Exception)` has been renamed to `SubmitException(Exception)`.
-5. `ProcessUnhandledException(Exception)` has been renamed to `SubmitUnhandledException(Exception)`.
-6. `SubmitPatch(string id, object patch)` has been removed.
-7. `SuspendProcessing()` has been moved to `client.Configuration.Resolver.GetEventQueue().SuspendProcessing()`.
-7. `UpdateConfiguration()` has been moved to `Exceptionless.Configuration.SettingsManager.UpdateSettings(client.Configuration)`.
+1. `client.Create(Exception)` has been renamed to `client.CreateEvent()`.
+2. `client.CreateError(Exception)` has been renamed to `client.CreateException(Exception)`. *NOTE: This now submits the exception.*
+3. `client.SubmitError(Error)` has been renamed to `client.SubmitEvent(Event)`.
+4. `client.SubmitError(Exception)` and `client.Submit(Exception)` has been renamed to `client.SubmitException(Exception)`.
+5. `client.ProcessUnhandledException(Exception)` has been renamed to `client.SubmitUnhandledException(Exception)`.
+6. `client.SubmitPatch(string id, object patch)` has been removed.
+7. `client.SuspendProcessing()` has been moved to `client.Configuration.Resolver.GetEventQueue().SuspendProcessing()`.
+7. `client.UpdateConfiguration()` has been moved to `Exceptionless.Configuration.SettingsManager.UpdateSettings(client.Configuration)`.
 
 #### Properties
 1. `ExceptionlessClient.Current` has been deprecated and replaced with `ExceptionlessClient.Default`.
@@ -47,7 +47,8 @@ The following changes affect a very small portion of users.
 The following changes affect a very small portion of users.
 
 1. `ErrorBuilder` has been renamed to `EventBuilder`.
-2. `IExceptionlessPlugin` has been replaced with `IEventEnrichment`. *NOTE: Enrichments can be registered via  `client.Configuration.AddEnrichment<IEventEnrichment>();`*
+2. `client.Tags` has been moved to `client.Configuration.DefaultTags`.
+3. `IExceptionlessPlugin` has been replaced with `IEventEnrichment`. *NOTE: Enrichments can be registered via  `client.Configuration.AddEnrichment<IEventEnrichment>();`*
 
 #### Events
 1. `event EventHandler<UnhandledExceptionReportingEventArgs> UnhandledExceptionReporting` has been removed and replaced with `event EventHandler<EventSubmittingEventArgs> SubmittingEvent`. You'll need to wire up to `SubmittingEvent` and check the `IsUnhandledError` property.
