@@ -28,7 +28,6 @@ A:
       <th>Term</th>
       <th>Example</th>
       <th>field required (field:term)</th>
-      <th>Available on type</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -37,308 +36,216 @@ A:
       <th scope="row">id</th>
       <td><code>id:54d8315ce6bb2d0500bcc7b4</code></td>
       <td>true</td>
-      <td>Events, Stacks</td>
       <td>The documents id</td>
     </tr>
     <tr>
       <th scope="row">organization</th>
       <td><code>organization:54d8315ce6bb2d0500bcc7b4</code></td>
       <td>true</td>
-      <td>Events, Stacks</td>
       <td>Organization id</td>
     </tr>
     <tr>
       <th scope="row">project</th>
       <td><code>project:54d8315ce6bb2d0500bcc7b4</code></td>
       <td>true</td>
-      <td>Events, Stacks</td>
       <td>Project id</td>
     </tr>
     <tr>
       <th scope="row">stack</th>
       <td><code>stack:54d8315ce6bb2d0500bcc7b4</code></td>
       <td>true</td>
-      <td>Events</td>
       <td>Stack id</td>
     </tr>
     <tr>
       <th scope="row">reference</th>
       <td><code>reference:12345678</code></td>
       <td>true</td>
-      <td>Events</td>
       <td>Reference id</td>
     </tr>
     <tr>
       <th scope="row">session</th>
       <td><code>session:12345678</code></td>
       <td>true</td>
-      <td>Events</td>
       <td>Session id</td>
     </tr>
     <tr>
       <th scope="row">type</th>
       <td><code>type:error</code></td>
       <td>true</td>
-      <td>Events, Stacks</td>
       <td>Event type</td>
     </tr>
     <tr>
       <th scope="row">source</th>
       <td><code>source:"my log source"</code> or <code>"my log source"</code></td>
       <td>false</td>
-      <td>Events</td>
       <td>Event source</td>
     </tr>
     <tr>
       <th scope="row">level</th>
       <td><code>level:Error</code></td>
       <td>true</td>
-      <td>Events</td>
       <td>Log level</td>
     </tr>
     <tr>
       <th scope="row">date</th>
       <td><code>date:"2020-10-16T12:00:00.000"</code></td>
       <td>true</td>
-      <td>Events</td>
       <td>Occurrence date</td>
     </tr>
     <tr>
       <th scope="row">first</th>
       <td><code>first:true</code></td>
       <td>true</td>
-      <td>Events</td>
       <td>True if it's the first occurrence of an event</td>
-    </tr>
-    <tr>
-      <th scope="row">first</th>
-      <td><code>first:"2020-10-16T12:00:00.000"</code></td>
-      <td>true</td>
-      <td>Stacks</td>
-      <td>First occurrence date</td>
-    </tr>
-    <tr>
-      <th scope="row">last</th>
-      <td><code>last:"2020-10-16T12:00:00.000"</code></td>
-      <td>true</td>
-      <td>Stacks</td>
-      <td>Last occurrence date</td>
-    </tr>
-    <tr>
-      <th scope="row">occurrences</th>
-      <td><code>occurrences:50</code></td>
-      <td>true</td>
-      <td>Stacks</td>
-      <td>Total occurrences</td>
-    </tr>
-    <tr>
-      <th scope="row">title</th>
-      <td><code>title:"My Custom Log message"</code> or <code>"My Custom Log message"</code></td>
-      <td>false</td>
-      <td>Stacks</td>
-      <td>Stack title</td>
     </tr>
     <tr>
       <th scope="row">message</th>
       <td><code>message:"My error message"</code> or <code>"My error message"</code></td>
       <td>false</td>
-      <td>Events</td>
       <td>Event message</td>
     </tr>
     <tr>
       <th scope="row">tag</th>
       <td><code>tag:"Blake Niemyjski"</code> or<code>tag:Blake</code> or <code>blake</code></td>
       <td>false</td>
-      <td>Events, Stacks</td>
       <td>Tags</td>
     </tr>
     <tr>
       <th scope="row">value</th>
       <td><code>value:1</code></td>
       <td>true</td>
-      <td>Events</td>
       <td>Value of the event (used in charts)</td>
-    </tr>
-     <tr>
-      <th scope="row">fixedon</th>
-      <td><code>fixedon:"2020-10-16T12:00:00.000"</code></td>
-      <td>true</td>
-      <td>Stacks</td>
-      <td>Date fixed</td>
     </tr>
     <tr>
       <th scope="row">fixed</th>
       <td><code>fixed:true</code></td>
       <td>true</td>
-      <td>Events, Stacks</td>
       <td>True if marked as fixed</td>
     </tr>
     <tr>
       <th scope="row">hidden</th>
       <td><code>hidden:true</code></td>
       <td>true</td>
-      <td>Events, Stacks</td>
       <td>True if marked as hidden</td>
-    </tr>
-    <tr>
-      <th scope="row">regressed</th>
-      <td><code>regressed:true</code></td>
-      <td>true</td>
-      <td>Stacks</td>
-      <td>True if marked as regressed</td>
-    </tr>
-    <tr>
-      <th scope="row">critical</th>
-      <td><code>critical:true</code></td>
-      <td>true</td>
-      <td>Stacks</td>
-      <td>True if marked as critical</td>
     </tr>
     <tr>
       <th scope="row">version</th>
       <td><code>version:1</code> or <code>version:1.0</code> or <code>version:1.0.0</code></td>
       <td>true</td>
-      <td>Events</td>
       <td>Application version</td>
     </tr>
     <tr>
       <th scope="row">machine</th>
       <td><code>machine:Server</code> or <code>Server</code></td>
       <td>false</td>
-      <td>Events</td>
       <td>Machine name</td>
     </tr>
     <tr>
       <th scope="row">ip</th>
       <td><code>ip:127.0.0.1</code> or <code>127.0.0.1</code></td>
       <td>false</td>
-      <td>Events</td>
       <td>IP address</td>
     </tr>
     <tr>
       <th scope="row">architecture</th>
       <td><code>architecture:x64</code></td>
       <td>true</td>
-      <td>Events</td>
       <td>Machine architecture</td>
-    </tr>
-    <tr>
-      <th scope="row">links</th>
-      <td><code>links:"http://exceptionless.io"</code> or <code>"http://exceptionless.io"</code></td>
-      <td>false</td>
-      <td>Stacks</td>
-      <td>Reference links</td>
     </tr>
     <tr>
       <th scope="row">useragent</th>
       <td><code>useragent:IE</code> or <code>useragent:"Mozilla/5.0"</code></td>
       <td>true</td>
-      <td>Events</td>
       <td>User Agent</td>
     </tr>
     <tr>
       <th scope="row">path</th>
       <td><code>path:"/cart"</code> or <code>"/cart"</code></td>
       <td>false</td>
-      <td>Events</td>
       <td>Url path</td>
     </tr>
     <tr>
       <th scope="row">browser</th>
       <td><code>browser:Chrome</code></td>
       <td>true</td>
-      <td>Events</td>
       <td>Browser</td>
     </tr>
     <tr>
       <th scope="row">browser.version</th>
       <td><code>browser.version:50.0</code></td>
       <td>true</td>
-      <td>Events</td>
       <td>Browser version</td>
     </tr>
     <tr>
       <th scope="row">browser.major</th>
       <td><code>browser.major:50</code></td>
       <td>true</td>
-      <td>Events</td>
       <td>Browser major version</td>
     </tr>
     <tr>
       <th scope="row">device</th>
       <td><code>device:iPhone</code></td>
       <td>true</td>
-      <td>Events</td>
       <td>Device</td>
     </tr>
     <tr>
       <th scope="row">os</th>
       <td><code>os:iOS</code></td>
       <td>true</td>
-      <td>Events</td>
       <td>Operating System</td>
     </tr>
     <tr>
       <th scope="row">os.version</th>
       <td><code>os.version:8.0</code></td>
       <td>true</td>
-      <td>Events</td>
       <td>Operating System version</td>
     </tr>
     <tr>
       <th scope="row">os.major</th>
       <td><code>os.major:8</code></td>
       <td>true</td>
-      <td>Events</td>
       <td>Operating System major version</td>
     </tr>
     <tr>
       <th scope="row">bot</th>
       <td><code>bot:true</code></td>
       <td>true</td>
-      <td>Events</td>
       <td>Bot</td>
     </tr>
     <tr>
       <th scope="row">error.code</th>
       <td><code>error.code:500</code> or <code>500</code></td>
       <td>false</td>
-      <td>Events</td>
       <td>Error code</td>
     </tr>
     <tr>
       <th scope="row">error.message</th>
       <td><code>error.message:"A NullReferenceException occurred"</code> or <code>"A NullReferenceException occurred"</code></td>
       <td>false</td>
-      <td>Events</td>
       <td>Error message</td>
     </tr>
     <tr>
       <th scope="row">error.type</th>
       <td><code>error.type:"System.NullReferenceException"</code> or <code>"System.NullReferenceException"</code></td>
       <td>false</td>
-      <td>Events</td>
       <td>Error type</td>
     </tr>
     <tr>
       <th scope="row">error.targettype</th>
       <td><code>error.targettype:"System.NullReferenceException"</code> or <code>"System.NullReferenceException"</code></td>
       <td>false</td>
-      <td>Events</td>
       <td>Error target type</td>
     </tr>
     <tr>
       <th scope="row">error.targetmethod</th>
       <td><code>error.targetmethod:AssociateWithCurrentThread</code> or <code>AssociateWithCurrentThread</code></td>
       <td>false</td>
-      <td>Events</td>
       <td>Error target method</td>
     </tr>
     <tr>
       <th scope="row">user</th>
       <td><code>user:"random user identifier"</code> or <code>"random user identifier"</code></td>
       <td>false</td>
-      <td>Events</td>
       <td>Uniquely identifies the user.</td>
     </tr>
    <tr>
@@ -346,28 +253,18 @@ A:
       <th scope="row">user.name</th>
       <td><code>user:"Exceptionless User"</code> or <code>"Exceptionless User"</code></td>
       <td>false</td>
-      <td>Events</td>
       <td>Friendly name of the user.</td>
-    </tr>
-   <tr>
-      <th scope="row">description</th>
-      <td><code>description:"My description"</code> or <code>"My Description"</code></td>
-      <td>false</td>
-      <td>Stacks</td>
-      <td>Description</td>
     </tr>
     <tr>
       <th scope="row">user.description</th>
       <td><code>user.description:"I clicked the button"</code> or <code>"I clicked the button"</code></td>
       <td>false</td>
-      <td>Events</td>
       <td>User Description</td>
     </tr>
     <tr>
       <th scope="row">user.email</th>
       <td><code>user.email:"support@exceptionless.io"</code> or <code>"support@exceptionless.io"</code></td>
       <td>false</td>
-      <td>Events</td>
       <td>User Email Address</td>
     </tr>
   </tbody>
