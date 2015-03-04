@@ -9,7 +9,9 @@ permalink: /contents/search/
 Here are some answers to frequently asked questions about Search.
 
 ## Q: Can I search by multiple queries?
-**A:** Yes, all queries separated by a space will be an `AND` operation. If you wish to `OR` queries you'll need to use an `OR` statement (Ex. `tag:blue OR tag:red`).
+**A:** Yes, all queries separated by a space will be an `AND` operation. If you wish to `OR` queries you'll need to use an `OR` statement.
+
+**Example:** Lets assume that we want to return all events that have a `blue` or `red` tag. To search for these events our query would be `tag:blue OR tag:red`
 
 ## Q: Can I search by a wild card?
 **A:** Yes, you need to suffix your query with a `*`.
@@ -22,7 +24,7 @@ Here are some answers to frequently asked questions about Search.
 ## Q: Can I search for set and unset fields?
 **A:** Yes, you need to prefix the field name with `_missing_` or `_exists_`.
 
-**Example:** Lets assume that we want to return all events that do not contain any tags. To search for these events our query would be `_missing_:tag`
+**Example:** Lets assume that we want to return all events that do not contain any tags. To search for these events our query would be `_missing_:tag`.
 
 ## Q: Can I search by using ranges?
 **A:** Yes, you need to specify a `date` or `numeric` range as part of the term. Please see [this](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#_ranges_2) for more information.
