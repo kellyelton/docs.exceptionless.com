@@ -12,7 +12,7 @@ Here are some answers to frequently asked questions about Search.
 **A:** Yes, all queries separated by a space will be an `AND` operation. If you wish to `OR` queries you'll need to use an `OR` statement (Ex. `tag:blue OR tag:red`).
 
 ## Q: Can I search by a wild card?
-**A:** Yes, you need to suffix your query with a `*`
+**A:** Yes, you need to suffix your query with a `*`.
 
 ## Q: Can I search with an exclusion?
 **A:** Yes, you need to prefix the field name with `-`.
