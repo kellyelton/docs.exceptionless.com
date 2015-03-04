@@ -9,18 +9,35 @@ permalink: /contents/search/
 Here are some answers to frequently asked questions about Search.
 
 ## Q: Can I search by multiple queries?
-A: Yes, all queries separated by a space will be an `AND` operation. If you wish to `OR` queries you'll need to use an `OR` statement (Ex. `tag:blue OR tag:red`).
+**A:** Yes, all queries separated by a space will be an `AND` operation. If you wish to `OR` queries you'll need to use an `OR` statement (Ex. `tag:blue OR tag:red`).
 
 ## Q: Can I search by a wild card?
-A: Yes, you need to suffix your query with a *
+**A:** Yes, you need to suffix your query with a `*`
+
+## Q: Can I search with an exclusion?
+**A:** Yes, you need to prefix the field name with `-`.
+
+**Example:** Lets assume that we want to return all events that are not marked as a bot. To search for these events our query would be `-bot:true`. *NOTE: In some cases searching with `-bot:true` is more accurate than searching with `bot:false`. This happens because the first query returns all records where `bot` field is `not set` or `not equal to true`. The second query returns results only where the `bot` field is set to `false`.
+
+## Q: Can I search for set and unset fields?
+**A:** Yes, you need to prefix the field name with `_missing_` or `_exists_`.
+
+**Example:** Lets assume that we want to return all events that do not contain any tags. To search for these events our query would be `_missing_:tag`
+
+## Q: Can I search by using ranges?
+**A:** Yes, you need to specify a `date` or `numeric` range as part of the term. Please see [this](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#_ranges_2) for more information.
+
+**Date Range Example:** Lets assume that we want to return all events that occurred in 2020. To search for these events our query would be `date:[2020-01-01 TO 2020-12-31]`.
+
+**Numeric Range Example:** Lets assume that we want to return all events that contain contain a `value` between 1 and 10. To search for these events our query would be `value:(>0 AND <=10)`.
 
 ## Q: Can I search by my custom extended data?
-A: Yes, all simple data types (`string`, `boolean`, `date`, `number`) that are stored in extended data will be indexed. *NOTE: Field names will be lowercased and escaped. If your field contains a `space` it will be escaped with a `-`.* 
+**A:** Yes, all simple data types (`string`, `boolean`, `date`, `number`) that are stored in extended data will be indexed. *NOTE: Field names will be lowercased and escaped. If your field contains a `space` it will be escaped with a `-`.* 
 
 **Example:** Lets assume that our events extended data contains a property called `Age` with a value of `18`. To search for this value our query would be `data.age:18`.
 
 ## Q: What fields can I search on?
-A: 
+**A:** 
 
 <table class="table table-bordered">
   <thead>
