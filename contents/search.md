@@ -2,7 +2,8 @@
 layout: docs
 edit_path: search
 title: Searching
-prev_section: faq
+prev_section: sendingevents
+next_section: security
 permalink: /contents/search/
 ---
 
