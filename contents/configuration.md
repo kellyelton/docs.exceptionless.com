@@ -131,29 +131,6 @@ try {
 }
 {% endhighlight %}
 
-## Enabling trace message collection
-
-*Recommended*: You can now log and search your trace messages with [Exceptionless](/contents/sendingevents)!
-
-One config setting built into Exceptionless can be used to include the last X trace log messages with your event reports. You can enable this setting by specifying a `TraceLogLimit` setting with a value greater than 0. This value is the maxiumum number of trace messages that will be submitted with the event report.
-
-### Configuration file
-
-{% highlight xml %}
-<exceptionless apiKey="YOUR_API_KEY">
-  <settings>
-    <add name="TraceLogLimit" value="10" />
-  </settings>
-</exceptionless>
-{% endhighlight %}
-
-### Attribute
-
-{% highlight c# %}
-using Exceptionless.Configuration;
-[assembly: ExceptionlessSetting("TraceLogLimit", "10")]
-{% endhighlight %}
-
 ## Adding static extended data values with every report
 
 You can have the Exceptionless client automatically add extended data values to every report that it submits like this:
