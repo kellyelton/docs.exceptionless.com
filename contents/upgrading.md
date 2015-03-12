@@ -3,7 +3,7 @@ layout: docs
 edit_path: upgrading
 title: Upgrading the Exceptionless client
 prev_section: faq
-permalink: /contents/upgrading/
+permalink: /contents/upgrading
 ---
 
 ##Upgrading from all previous versions of Exceptionless
