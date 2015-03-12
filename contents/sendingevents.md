@@ -7,7 +7,7 @@ next_section: search
 permalink: /contents/sendingevents/
 ---
 
-Once configured, Exceptionless will automatically send any unhandled exceptions that happen in your application. The topics below will show you how to customize the data that is sent as well as send us other types of events.
+Once configured, Exceptionless will automatically send any unhandled exceptions that happen in your application. The sections below will show you how to send us different event types as well as customize the data that is sent in.
 
 ## Sending Events
 
