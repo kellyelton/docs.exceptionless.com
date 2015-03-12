@@ -44,6 +44,32 @@ using Exceptionless.Configuration;
 [assembly: Exceptionless("YOUR_API_KEY")]
 {% endhighlight %}
 
+## Code
+
+{% highlight c# %}
+var client = new ExceptionlessClient(c => {
+    c.ApiKey = "YOUR_API_KEY";
+    c.SetVersion(version);
+});
+
+// You can also set the api directly on the default instance.
+ExceptionlessClient.Default.Configuration.ApiKey = "YOUR_API_KEY"
+{% endhighlight %}
+
+## Exceptionless Portable Class Library (PCL) Configuration
+If you are using only the `Exceptionless` package, you'll need to configure exceptionless via attribute config or code. If you choose the attribute method, you'll need to read the configuration on startup.
+
+{% highlight c# %}
+ExceptionlessClient.Default.Configuration.ReadFromAttributes(typeof(MyClass).Assembly)
+{% endhighlight %}
+
+You will also need to wire up to any error handlers as the `Exceptionless` PCL package doesn't know what platform you are running on. 
+
+It's also worth noting that when using the `Exceptionless` PCL package you will the very basic feature set:
+1. Basic stacking of exceptions. PCL libraries don't have access to an errors stack frames so they can't be broken down.
+2. Basic `ISubmissionClient` that doesn't support proxies.
+3. No Environmental Information will be sent.
+
 ## Using a Custom Event Queue Folder
 
 By default the Exceptionless client stores events in an isolated storage folder. If you want to change it to use a
