@@ -11,8 +11,11 @@
       <li class="{% if page.title == "Configuration" %}active{% endif %}">
         <a href="{{ site.url }}/contents/configuration">Configuration</a>
       </li>
-      <li class="{% if page.title == "Sending Errors" %}active{% endif %}">
-        <a href="{{ site.url }}/contents/sendingerrors">Sending Errors</a>
+      <li class="{% if page.title == "Sending Events" %}active{% endif %}">
+        <a href="{{ site.url }}/contents/sendingevents">Sending Events</a>
+      </li>
+      <li class="{% if page.title == "Searching" %}active{% endif %}">
+        <a href="{{ site.url }}/contents/search">Searching</a>
       </li>
     </ul>
     <h4>Miscellaneous</h4>
@@ -25,6 +28,9 @@
       </li>
       <li class="{% if page.title == "Frequently Asked Questions" %}active{% endif %}">
         <a href="{{ site.url }}/contents/faq">FAQ</a>
+      </li>
+      <li class="{% if page.title == "Upgrading" %}active{% endif %}">
+        <a href="{{ site.url }}/contents/upgrading">Upgrading</a>
       </li>
     </ul>
     {% if page.edit_path %}
