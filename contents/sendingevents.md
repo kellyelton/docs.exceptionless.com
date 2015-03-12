@@ -34,7 +34,7 @@ try {
         .AddObject(order, "Order", excludedPropertyNames: new [] { "CreditCardNumber" }, maxDepth: 2)
         .AddTags("Order", "User")
         .MarkAsCritical()
-        .SetUserEmail(user.EmailAddress)
+        .SetUserIdentity(user.EmailAddress)
         .Submit();
 }
 {% endhighlight %}
@@ -42,24 +42,38 @@ try {
 ## Modifying Unhandled Exception Reports
 
 You can get notified, add additional information or ignore unhandled exceptions by wiring up to the
-`UnhandledExceptionReporting` event.
+`SubmittingEvent` event.
 
 {% highlight c# %}
 // Wire up to this event in somewhere in your application's startup code.
-ExceptionlessClient.Current.UnhandledExceptionReporting += OnUnhandledExceptionReporting;
+ExceptionlessClient.Default.SubmittingEvent += OnSubmittingEvent;
 
-void OnUnhandledExceptionReporting(object sender, UnhandledExceptionReportingEventArgs args) {
-    // ignore 404 and request validation errors
-    if (args.Error.Code == "404" || args.Error.Type == "System.Web.HttpRequestValidationException")
-        args.Cancel = true;
+void OnSubmittingEvent(object sender, EventSubmittingEventArgs e) {
+    // Only handle unhandled exceptions.
+    if (!e.IsUnhandledError)
+        return;
+
+    // Ignore 404s
+    if (e.Event.IsNotFound()) {
+        e.Cancel = true;
+        return;
+    }
+
+    // Get the error object.
+    var error = e.Event.GetError();
+    if (error == null)
+        return;
+
+    // Ignore 401 (Unauthorized) and request validation errors.
+    if (error.Code == "401" || error.Type == "System.Web.HttpRequestValidationException") {
+        e.Cancel = true;
         return;
     }
     
-    // add some additional data to the report
-    args.Error.AddObject(order, "Order", excludedPropertyNames: new [] { "CreditCardNumber" }, maxDepth: 2);
-    args.Error.Tags.Add("Order");
-    args.Error.MarkAsCritical();
-    args.Error.UserEmail = user.EmailAddress;
+    // Add some additional data to the report.
+    e.Event.AddObject(order, "Order", excludedPropertyNames: new [] { "CreditCardNumber" }, maxDepth: 2);
+    e.Event.Tags.Add("Order");
+    e.Event.MarkAsCritical();
+    e.Event.SetUserIdentity(user.EmailAddress);
 }
 {% endhighlight %}
-
