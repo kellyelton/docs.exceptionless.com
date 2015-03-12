@@ -1,10 +1,10 @@
 ---
 layout: docs
-edit_path: sendingerrors
-title: Sending Errors
+edit_path: sendingevents
+title: Sending Events
 prev_section: configuration
 next_section: search
-permalink: /contents/sendingerrors/
+permalink: /contents/sendingevents/
 ---
 
 Once configured, Exceptionless will automatically send any unhandled exceptions that happen in your application.
