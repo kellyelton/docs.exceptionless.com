@@ -3,7 +3,7 @@ layout: docs
 edit_path: configuration
 title: Configuration
 prev_section: gettingstarted
-next_section: sendingerrors
+next_section: sendingevents
 permalink: /contents/configuration/
 ---
 
