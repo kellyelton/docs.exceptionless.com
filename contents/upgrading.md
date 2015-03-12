@@ -11,8 +11,7 @@ Please read this guide when upgrading from any version of Exceptionless. Upgradi
 
 1. Open the NuGet Package Manager dialog.
 2. Click on the Updates tab.
-3. *NOTE: To upgrade to 2.x preview you will have to select "Include Prerelease" from the dropdown.*
-4. Select the exceptionless nuget packages and click the Update button.
+3. Select the exceptionless nuget packages and click the Update button.
 
 For more information please see the official [NuGet documentation](https://docs.nuget.org/consume/Package-Manager-Dialog).
 
