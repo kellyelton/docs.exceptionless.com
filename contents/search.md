@@ -3,7 +3,7 @@ layout: docs
 edit_path: search
 title: Searching
 prev_section: faq
-permalink: /contents/search
+permalink: /contents/search/
 ---
 
 Here are some answers to frequently asked questions about Search.
