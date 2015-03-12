@@ -7,7 +7,29 @@ next_section: search
 permalink: /contents/sendingevents/
 ---
 
-Once configured, Exceptionless will automatically send any unhandled exceptions that happen in your application.
+Once configured, Exceptionless will automatically send any unhandled exceptions that happen in your application. The topics below will show you how to customize the data that is sent as well as send us other types of events.
+
+## Sending Events
+
+You may also want to send us log messages, feature usages or other kinds of events. You can do this very easily with our fluent api.
+
+{% highlight c# %}
+    // Submit logs
+    ExceptionlessClient.Default.SubmitLog("Logging made easy");
+    ExceptionlessClient.Default.SubmitLog(typeof(Program).FullName, "This is so easy", "Info");
+    ExceptionlessClient.Default.CreateLog("Logging made easy").AddTags("Exceptionless").Submit();
+    
+    // Submit feature usages
+    ExceptionlessClient.Default.SubmitFeatureUsage("MyFeature");
+    ExceptionlessClient.Default.CreateFeatureUsage("MyFeature").AddTags("Exceptionless").Submit();
+    
+    // Submit a 404
+    ExceptionlessClient.Default.SubmitNotFound("/somepage");
+    ExceptionlessClient.Default.CreateNotFound("/somepage").AddTags("Exceptionless").Submit();
+    
+    // Submit a custom event
+    ExceptionlessClient.Default.SubmitEvent(new Event { Message = "Race Car Event", Type = "racecar" });
+{% endhighlight %}
 
 ## Manually Sending Errors
 
