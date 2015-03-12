@@ -2,7 +2,7 @@
 layout: docs
 edit_path: security
 title: Security
-prev_section: sendingerrors
+prev_section: search
 next_section: troubleshooting
 permalink: /contents/security/
 ---
