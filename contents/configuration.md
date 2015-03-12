@@ -61,7 +61,7 @@ different folder, then you can use the `storagePath` attribute or call `UseFolde
 ExceptionlessClient.Default.Configuration.UseFolderStorage("C:\\ExceptionlessEvents");
 {% endhighlight %}
 
-You can also use in memory storage, this is recommended for high throughput logging scenarios. The client will store errors in memory instead of serializing the errors to disk, but at the expense that any submitted events will be lost on application exit.
+You can also use in memory storage, this is recommended for high throughput logging scenarios. The client will store events in memory instead of serializing the events to disk, but at the expense that any unsubmitted events will be lost on application exit.
 
 {% highlight c# %}
 ExceptionlessClient.Default.Configuration.UseInMemoryStorage();
@@ -81,7 +81,7 @@ You can also configure exceptionless to capture all WCF exceptions following the
 
 ## Disabling Exceptionless during testing
 
-You can disable Exceptionless from reporting errors during testing using the `Enabled` setting.
+You can disable Exceptionless from reporting events during testing using the `Enabled` setting.
 
 ### Configuration file
 
