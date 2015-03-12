@@ -48,6 +48,7 @@ The following changes affect a very small portion of users.
 1. `ErrorBuilder` has been renamed to `EventBuilder`.
 2. `client.Tags` has been moved to `client.Configuration.DefaultTags`.
 3. `IExceptionlessPlugin` has been replaced with `IEventEnrichment`. *NOTE: Enrichments can be registered via  `client.Configuration.AddEnrichment<IEventEnrichment>();`*
+4. `client.Configuration["MySetting"]` has been moved to `client.Configuration.Settings["MySetting"]`.
 
 #### Events
 1. `event EventHandler<UnhandledExceptionReportingEventArgs> UnhandledExceptionReporting` has been removed and replaced with `event EventHandler<EventSubmittingEventArgs> SubmittingEvent`. You'll need to wire up to `SubmittingEvent` and check the `IsUnhandledError` property.
