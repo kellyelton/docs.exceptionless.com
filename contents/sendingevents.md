@@ -48,7 +48,7 @@ You can get notified, add additional information or ignore unhandled exceptions 
 // Wire up to this event in somewhere in your application's startup code.
 ExceptionlessClient.Default.SubmittingEvent += OnSubmittingEvent;
 
-void OnSubmittingEvent(object sender, EventSubmittingEventArgs e) {
+private void OnSubmittingEvent(object sender, EventSubmittingEventArgs e) {
     // Only handle unhandled exceptions.
     if (!e.IsUnhandledError)
         return;
@@ -76,4 +76,5 @@ void OnSubmittingEvent(object sender, EventSubmittingEventArgs e) {
     e.Event.MarkAsCritical();
     e.Event.SetUserIdentity(user.EmailAddress);
 }
+
 {% endhighlight %}
