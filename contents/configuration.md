@@ -19,7 +19,7 @@ elements.  It should look like this:
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
   <configSections>
-    <section name="exceptionless" type="Exceptionless.Configuration.ExceptionlessSection, Exceptionless" requirePermission="false" />
+    <section name="exceptionless" type="Exceptionless.ExceptionlessSection, Exceptionless.Extras" />
   </configSections>
   <!-- attribute names are cases sensitive, must specify a path that you have write access to -->
   <exceptionless apiKey="API_KEY_HERE" enableLogging="true" logPath="C:\log.txt" />
@@ -40,27 +40,32 @@ elements.  It should look like this:
 You can also configure Exceptionless using attributes like this:
 
 {% highlight c# %}
+using Exceptionless.Configuration;
 [assembly: Exceptionless("YOUR_API_KEY")]
 {% endhighlight %}
 
-## Using a Custom Error Queue Folder
+## Using a Custom Event Queue Folder
 
-By default the Exceptionless client stores errors in an isolated storage folder. If you want to change it to use a
-different folder, then you can use the `QueuePath` setting. If you specify a `QueuePath`, make sure that whatever
-identity the application is running under has full permissions to that folder.
+By default the Exceptionless client stores events in an isolated storage folder. If you want to change it to use a
+different folder, then you can use the `storagePath` attribute or call `UseFolderStorage`. Please make sure that whatever identity the application is running under has full permissions to that folder.
 
 ### Configuration file
 
 {% highlight xml %}
-<exceptionless apiKey="YOUR_API_KEY" queuePath="C:\ExceptionlessErrors" />
+<exceptionless apiKey="YOUR_API_KEY" storagePath="C:\ExceptionlessEvents" />
 {% endhighlight %}
 
-### Attribute
+### Code
 
 {% highlight c# %}
-[assembly: Exceptionless("YOUR_API_KEY", QueuePath="C:\\ExceptionlessErrors")]
+ExceptionlessClient.Default.Configuration.UseFolderStorage("C:\\ExceptionlessEvents");
 {% endhighlight %}
 
+You can also use in memory storage, this is recommended for high throughput logging scenarios. The client will store errors in memory instead of serializing the errors to disk, but at the expense that any submitted events will be lost on application exit.
+
+{% highlight c# %}
+ExceptionlessClient.Default.Configuration.UseInMemoryStorage();
+{% endhighlight %}
 
 ## WCF Configuration
 
@@ -87,12 +92,15 @@ You can disable Exceptionless from reporting errors during testing using the `En
 ### Attribute
 
 {% highlight c# %}
+using Exceptionless.Configuration;
 [assembly: Exceptionless("YOUR_API_KEY", Enabled=false)]
 {% endhighlight %}
 
 ## Custom config settings
 
 Exceptionless allows you to add custom config values to your Exceptionless clients that can be set through the client config section, attributes or remotely on the project settings. These config values can be accessed and used within your app to control things like wether or not to send custom data with your reports. For example, you could have a `IncludeOrderData` flag in your config that you use to control wether or not you add a custom order object to your Exceptionless report data. You can even remotely turn the setting on or off from your project settings. Here is an example of doing that:
+
+### Configuration file
 
 {% highlight xml %}
 <exceptionless apiKey="YOUR_API_KEY">
@@ -102,8 +110,10 @@ Exceptionless allows you to add custom config values to your Exceptionless clien
 </exceptionless>
 {% endhighlight %}
 
-Or in a config attribute like:
+### Attribute
+
 {% highlight c# %}
+using Exceptionless.Configuration;
 [assembly: ExceptionlessSetting("IncludeOrderData", "true")]
 {% endhighlight %}
 
@@ -114,7 +124,7 @@ try {
   ...
 } catch (Exception ex) {
   var report = ex.ToExceptionless();
-  if (ExceptionlessClient.Current.Configuration["Blah"] == "true")
+  if (ExceptionlessClient.Default.Configuration.Settings["IncludeOrderData"] == "true")
       report.AddObject(order);
   report.Submit();
 }
@@ -122,7 +132,10 @@ try {
 
 ## Enabling trace message collection
 
-One config setting built into Exceptionless can be used to include the last X trace log messages with your error reports. You can enable this setting by specifying a `TraceLogLimit` setting with a value greater than 0. This value is the maxiumum number of trace messages that will be submitted with the error report.
+*Recommended*: You can now log and search your trace messages with [Exceptionless](/contents/sendingevents)!
+
+One config setting built into Exceptionless can be used to include the last X trace log messages with your event reports. You can enable this setting by specifying a `TraceLogLimit` setting with a value greater than 0. This value is the maxiumum number of trace messages that will be submitted with the event report.
+
 ### Configuration file
 
 {% highlight xml %}
@@ -137,32 +150,47 @@ One config setting built into Exceptionless can be used to include the last X tr
 
 {% highlight c# %}
 using Exceptionless.Configuration;
-[assembly: ExceptionlessSetting(ClientConfiguration.TraceLogLimitKey, "10")]
+[assembly: ExceptionlessSetting("TraceLogLimit", "10")]
 {% endhighlight %}
 
 ## Adding static extended data values with every report
 
 You can have the Exceptionless client automatically add extended data values to every report that it submits like this:
 
+### Configuration file
+
 {% highlight xml %}
 <exceptionless apiKey="YOUR_API_KEY">
-    <extendedData>
+    <data>
       <add name="Data1" value="Exceptionless"/>
       <add name="Data2" value="10"/>
       <add name="Data3" value="true"/>
       <add name="Data4" value="{ 'Property1': 'Exceptionless', 'Property2: 10, 'Property3': true }"/>
-    </extendedData>
+    </data>
 </exceptionless>
+{% endhighlight %}
+
+### Code
+
+{% highlight c# %}
+ExceptionlessClient.Default.DefaultData["Data1"] = "Exceptionless";
 {% endhighlight %}
 
 ## Adding custom tags with every report
 
 You can have the Exceptionless client automatically add specific tags to every report that it submits like this:
 
+### Configuration file
+
 {% highlight xml %}
 <exceptionless apiKey="YOUR_API_KEY" tags="Tag1,Tag2" />
 {% endhighlight %}
 
+### Code
+
+{% highlight c# %}
+ExceptionlessClient.Default.DefaultTags.Add("Tag1");
+{% endhighlight %}
 
 ## Self hosted options
 The Exceptionless client can also be configured to send data to your self hosted instance. This is configured by setting the `serverUrl` setting to point to your Exceptionless instance. Please note that if you do not have SSL configured you
