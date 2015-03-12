@@ -70,6 +70,7 @@ ExceptionlessClient.Default.Configuration.UseInMemoryStorage();
 ## WCF Configuration
 
 You can also configure exceptionless to capture all WCF exceptions following the steps below.
+
 1. Install the [Exceptionless.Web](http://www.nuget.org/packages/Exceptionless.Web/) NuGet package. 
 2. Configure your Api Key (see the previous section).
 3. Add the ExceptionlessWcfHandleErrorAttribute to your WCF Classes.
