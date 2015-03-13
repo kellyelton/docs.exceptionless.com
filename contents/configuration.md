@@ -66,9 +66,12 @@ ExceptionlessClient.Default.Configuration.ReadFromAttributes(typeof(MyClass).Ass
 You will also need to wire up to any error handlers as the `Exceptionless` PCL package doesn't know what platform you are running on. 
 
 It's also worth noting that when using the `Exceptionless` PCL package you will the very basic feature set:
+
 1. Basic stacking of exceptions. PCL libraries don't have access to an errors stack frames so they can't be broken down.
 2. Basic `ISubmissionClient` that doesn't support proxies.
 3. No Environmental Information will be sent.
+
+For these reasons if you are on a known platform then use the platform specific package to save you time configuring while giving you more contextual information.
 
 ## Using a Custom Event Queue Folder
 
