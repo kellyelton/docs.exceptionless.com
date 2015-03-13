@@ -92,6 +92,13 @@ private void OnSubmittingEvent(object sender, EventSubmittingEventArgs e) {
         return;
     }
     
+    // Ignore any exceptions that were not thrown by our code.
+    var handledNamespaces = new List<string> { "Exceptionless" };
+    if (!error.StackTrace.Select(s => s.DeclaringNamespace).Distinct().Any(ns => _handledNamespaces.Any(ns.Contains))) {
+        e.Cancel = true;
+        return;
+    }
+    
     // Add some additional data to the report.
     e.Event.AddObject(order, "Order", excludedPropertyNames: new [] { "CreditCardNumber" }, maxDepth: 2);
     e.Event.Tags.Add("Order");
