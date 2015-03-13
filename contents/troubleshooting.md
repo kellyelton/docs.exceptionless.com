@@ -15,7 +15,7 @@ Please make sure that you are using the [latest version of the client](/contents
 
 ## Ensure that the queue has time to process
 
-If you are using Exceptionless in a scenario where an event is submitted and the process is immediately terminated, then you will need to make sure that the queue is processed before the application ends. Please note that this will happen automatically if you are using the `Exceptionless.Console`, `Exceptionless.Windows` or `Exceptionless.Wpf` packages. 
+If you are using Exceptionless in a scenario where an event is submitted and the process is immediately terminated, then you will need to make sure that the queue is processed before the application ends. Please note that this will happen automatically if you are not using the `Exceptionless.Portable` package. 
 
 Events are queued to disk and sent in the background, if the application isn't running then the events cannot be sent. You can manually force the queue to be processed by calling the following line of code before before the process ends:
 
