@@ -19,11 +19,6 @@ For more information please see the official [NuGet documentation](https://docs.
 
 Please read this guide when upgrading from Exceptionless 1.x. The Exceptionless latest client has a few breaking changes from 1.x client that users should be aware of when upgrading. Please follow the guide below after upgrading your NuGet packages from version 1.x to the latest version.
 
-_**NOTE:** If you are just using the `Exceptionless` package, you will have to [specify configuration]({{ site.url }}/contents/configuration) as this package is now a Portable Class Library and doesn't know how to wire up to any event handlers or read configuration._
-
-### Console and Service users
-We've created a new NuGet package [Exceptionless.Console](https://www.nuget.org/packages/exceptionless.console) that should be used in these scenarios.
-
 ### ExceptionlessClient API changes
 
 #### Methods
