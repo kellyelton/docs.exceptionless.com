@@ -57,7 +57,7 @@ ExceptionlessClient.Default.Configuration.ApiKey = "YOUR_API_KEY"
 {% endhighlight %}
 
 ## Exceptionless Portable Class Library (PCL) Configuration
-If you are using only the `Exceptionless` package, you'll need to configure exceptionless via attribute config or code. If you choose the attribute method, you'll need to read the configuration on startup.
+If you are using only the `Exceptionless.Portable` package, you'll need to configure exceptionless via attribute config or code. If you choose the attribute method, you'll need to read the configuration on startup.
 
 {% highlight c# %}
 ExceptionlessClient.Default.Configuration.ReadFromAttributes(typeof(MyClass).Assembly)
