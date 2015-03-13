@@ -98,4 +98,7 @@ private static void OnSubmittingEvent(object sender, EventSubmittingEventArgs e)
 </exceptionless>
 {% endhighlight %}
 
+### Collector end point changes
+The collector that the client reports to has been changed from `https://collector.exceptionless.com` to `https://collector.exceptionless.io`. Please note that `https://collector.exceptionless.com` will continue to work but will not be the default end point.
+
 *Please [contact support](https://github.com/exceptionless/Exceptionless/issues/new) for assistance on updating any undocumented upgrade changes.*
