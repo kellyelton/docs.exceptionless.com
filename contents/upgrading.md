@@ -17,10 +17,10 @@ For more information please see the official [NuGet documentation](https://docs.
 
 ##Upgrading from Exceptionless 1.x
 
+Please read this guide when upgrading from Exceptionless 1.x. The Exceptionless latest client has a few breaking changes from 1.x client that users should be aware of when upgrading. Please follow the guide below after upgrading your NuGet packages from version 1.x to the latest version.
+
 ### Signed Packages
 If you require a strong named NuGet package please remove the existing NuGet package and install the signed NuGet version. Example: Remove `Exceptionless` NuGet package and install the `Exceptionless.Signed` NuGet package.
-
-Please read this guide when upgrading from Exceptionless 1.x. The Exceptionless latest client has a few breaking changes from 1.x client that users should be aware of when upgrading. Please follow the guide below after upgrading your NuGet packages from version 1.x to the latest version.
 
 ### ExceptionlessClient API changes
 
