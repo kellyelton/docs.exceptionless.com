@@ -75,10 +75,13 @@ private static void OnSubmittingEvent(object sender, EventSubmittingEventArgs e)
 ### Attribute configuration changes
 1. `QueuePath` has been renamed to `StoragePath`.
 2. `ExceptionlessAttribute(string serverUrl, string apiKey, ...)` signature has been changed to `ExceptionlessAttribute(string apiKey)`.
- 
+3. The `ExceptionlessAttribute` attribute must be in the entry or calling assembly or it won't be picked up. To have it be picked up from a different location, you need to pass in the assembly as shown below.
+
 ##### Overview
 {% highlight c# %}
 [assembly: Exceptionless("YOUR_API_KEY_HERE", ServerUrl = "...", StoragePath = "|DataDirectory|\Queue")]
+
+ExceptionlessClient.Default.Configuration.ReadFromAttributes(typeof(Program).Assembly);
 {% endhighlight %}
 
 ### Xml configuration changes
