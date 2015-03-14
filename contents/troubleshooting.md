@@ -63,6 +63,7 @@ methods:
 
 ### Code
 {% highlight c# %}
+using Exceptionless;
 ExceptionlessClient.Default.Configuration.UseFileLogger("C:\\exceptionless.log");
 {% endhighlight %}
 
