@@ -80,7 +80,8 @@ private static void OnSubmittingEvent(object sender, EventSubmittingEventArgs e)
 ##### Overview
 {% highlight c# %}
 [assembly: Exceptionless("YOUR_API_KEY_HERE", ServerUrl = "...", StoragePath = "|DataDirectory|\Queue")]
-
+...
+// You must specify the assembly where the attribute is defined only if it's not defined in the entry or calling assembly.
 ExceptionlessClient.Default.Configuration.ReadFromAttributes(typeof(Program).Assembly);
 {% endhighlight %}
 
