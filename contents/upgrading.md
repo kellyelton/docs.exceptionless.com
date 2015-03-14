@@ -10,8 +10,8 @@ permalink: /contents/upgrading/
 Please read this guide when upgrading from any version of Exceptionless. Upgrading is meant to be an easy process. **Most users will just have to upgrade the NuGet package.** If you run into any issues after upgrading the NuGet packages please take a look at the sections below.
 
 1. Open the NuGet Package Manager dialog.
-2. Click on the Updates tab.
-3. Select the Exceptionless platform specific NuGet package and click the Update button.
+2. Click on the `Updates` tab.
+3. Select the Exceptionless platform specific NuGet package (Ex. `Exceptionless.Web`) and click the `Update` button.
 
 For more information please see the official [NuGet documentation](https://docs.nuget.org/consume/Package-Manager-Dialog).
 
