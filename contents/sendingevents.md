@@ -27,8 +27,8 @@ ExceptionlessClient.Default.CreateFeatureUsage("MyFeature").AddTags("Exceptionle
 ExceptionlessClient.Default.SubmitNotFound("/somepage");
 ExceptionlessClient.Default.CreateNotFound("/somepage").AddTags("Exceptionless").Submit();
 
-// Submit a custom event
-ExceptionlessClient.Default.SubmitEvent(new Event { Message = "Race Car Event", Type = "racecar" });
+// Submit a custom event type
+ExceptionlessClient.Default.SubmitEvent(new Event { Message = "Low Fuel", Type = "racecar", Source = "Fuel System" });
 {% endhighlight %}
 
 ## Manually Sending Errors
