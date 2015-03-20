@@ -201,7 +201,7 @@ ExceptionlessClient.Default.DefaultTags.Add("Tag1");
 
 ## Enabling trace message collection
 
-*Recommended*: You can now submit and search log messages with [Exceptionless](/contents/sendingevents)!
+**Recommended: You can now submit and search log messages with [Exceptionless](/contents/sendingevents)!**
 
 One config setting built into Exceptionless can be used to include the last X trace log messages with your event reports. You can enable this setting by specifying a `TraceLogLimit` setting with a value greater than 0. This value is the maxiumum number of trace messages that will be submitted with the event report.
 
