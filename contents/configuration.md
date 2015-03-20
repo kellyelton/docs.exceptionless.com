@@ -199,6 +199,29 @@ You can have the Exceptionless client automatically add specific tags to every r
 ExceptionlessClient.Default.DefaultTags.Add("Tag1");
 {% endhighlight %}
 
+## Enabling trace message collection
+
+*Recommended*: You can now submit and search log messages with [Exceptionless](/contents/sendingevents)!
+
+One config setting built into Exceptionless can be used to include the last X trace log messages with your event reports. You can enable this setting by specifying a `TraceLogLimit` setting with a value greater than 0. This value is the maxiumum number of trace messages that will be submitted with the event report.
+
+### Configuration file
+
+{% highlight xml %}
+<exceptionless apiKey="YOUR_API_KEY">
+  <settings>
+    <add name="TraceLogLimit" value="10" />
+  </settings>
+</exceptionless>
+{% endhighlight %}
+
+### Attribute
+
+{% highlight c# %}
+using Exceptionless.Configuration;
+[assembly: ExceptionlessSetting("TraceLogLimit", "10")]
+{% endhighlight %}
+
 ## Self hosted options
 The Exceptionless client can also be configured to send data to your self hosted instance. This is configured by setting the `serverUrl` setting to point to your Exceptionless instance. Please note that if you do not have SSL configured you
 must set the `enableSSL` setting to `false`.
