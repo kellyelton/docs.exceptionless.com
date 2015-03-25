@@ -50,16 +50,27 @@ You can easily include additional information in your error reports using our fl
 
 {% highlight c# %}
 try {
-    throw new ApplicationException(Guid.NewGuid().ToString());
+    throw new ApplicationException("Unable to create order from quote.");
 } catch (Exception ex) {
     ex.ToExceptionless()
+        // Set the reference id of the event so we can search for it later (reference:id).
+        // This will automatically be populated if you call ExceptionlessClient.Default.Configuration.UseReferenceIds();
+        .SetReferenceId(Guid.NewGuid().ToString("N"))
+        // Add the order object but exclude the credit number property.
         .AddObject(order, "Order", excludedPropertyNames: new [] { "CreditCardNumber" }, maxDepth: 2)
+        // Set the quote number.
         .SetProperty("Quote", 123)
-        .AddTags("Order", "User")
+        // Add an order tag.
+        .AddTags("Order")
+        // Mark critical.
         .MarkAsCritical()
+        // Set the coordinates of the end user.
         .SetGeo(43.595089, -88.444602)
+        // Set the user id that is in our system and provide a friendly name.
         .SetUserIdentity(user.Id, user.FullName)
+        // Set the users description of the error.
         .SetUserDescription(user.EmailAddress, "I tried creating an order from my saved quote.")
+        // Submit the event.
         .Submit();
 }
 {% endhighlight %}
