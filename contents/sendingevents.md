@@ -46,7 +46,7 @@ try {
 
 ## Sending Additional Information
 
-You can easily include additional information in your error reports using our fluent error builder API.
+You can easily include additional information in your error reports using our fluent event builder API.
 
 {% highlight c# %}
 try {
@@ -54,6 +54,7 @@ try {
 } catch (Exception ex) {
     ex.ToExceptionless()
         .AddObject(order, "Order", excludedPropertyNames: new [] { "CreditCardNumber" }, maxDepth: 2)
+        .SetProperty("Quote", 123)
         .AddTags("Order", "User")
         .MarkAsCritical()
         .SetUserIdentity(user.EmailAddress)
