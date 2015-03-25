@@ -7,9 +7,15 @@ next_section: sendingevents
 permalink: /contents/configuration/
 ---
 
-Exceptionless can be configured in multiple ways.
+# Configuration
 
-## Config File
+The following sections will walk you through configuring Exceptionless to fit your specific requirements. The sections below assume that you already have an Exceptionless Api Key. You can find your Exceptionless Api Key by [clicking on your project in the project list](https://be.exceptionless.io/project/list). Next, click on the `Api Keys` tab to see your projects Api Keys.
+
+## ExceptionlessClient Configuration
+
+The examples below will show you the various ways (configuration file, attributes or code) the ExceptionlessClient may be configured. Please note that the package (Ex. `Exceptionless.WebApi`) you are using will contain a detailed read me with the best way to configure the ExceptionlessClient for your specific platform.
+
+### Config File
 
 Exceptionless can be configured using a config section in your web.config or app.config depending on what kind of
 project you have. Installing the correct NuGet package should automatically add the necessary configuration
@@ -35,7 +41,7 @@ elements.  It should look like this:
 </configuration>
 {% endhighlight %}
 
-## Attribute
+### Attribute
 
 You can also configure Exceptionless using attributes like this:
 
@@ -44,7 +50,7 @@ using Exceptionless.Configuration;
 [assembly: Exceptionless("YOUR_API_KEY")]
 {% endhighlight %}
 
-## Code
+### Code
 
 {% highlight c# %}
 var client = new ExceptionlessClient(c => {
