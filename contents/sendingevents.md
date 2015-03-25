@@ -57,7 +57,9 @@ try {
         .SetProperty("Quote", 123)
         .AddTags("Order", "User")
         .MarkAsCritical()
-        .SetUserIdentity(user.EmailAddress)
+        .SetGeo(43.595089, -88.444602)
+        .SetUserIdentity(user.Id, user.FullName)
+        .SetUserDescription(user.EmailAddress, "I tried creating an order from my saved quote.")
         .Submit();
 }
 {% endhighlight %}
