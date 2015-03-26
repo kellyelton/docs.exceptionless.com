@@ -111,7 +111,7 @@ private void OnSubmittingEvent(object sender, EventSubmittingEventArgs e) {
     
     // Ignore any exceptions that were not thrown by our code.
     var handledNamespaces = new List<string> { "Exceptionless" };
-    if (!error.StackTrace.Select(s => s.DeclaringNamespace).Distinct().Any(ns => _handledNamespaces.Any(ns.Contains))) {
+    if (!error.StackTrace.Select(s => s.DeclaringNamespace).Distinct().Any(ns => handledNamespaces.Any(ns.Contains))) {
         e.Cancel = true;
         return;
     }
