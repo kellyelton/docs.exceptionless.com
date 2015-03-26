@@ -16,8 +16,11 @@ You may also want to send us log messages, feature usages or other kinds of even
 {% highlight c# %}
 // Submit logs
 ExceptionlessClient.Default.SubmitLog("Logging made easy");
+
+// You can also specify the log source and log level.
+// We recommend specifying one of the following log levels: Trace, Debug, Info, Warn, Error
 ExceptionlessClient.Default.SubmitLog(typeof(Program).FullName, "This is so easy", "Info");
-ExceptionlessClient.Default.CreateLog("Logging made easy").AddTags("Exceptionless").Submit();
+ExceptionlessClient.Default.CreateLog(typeof(Program).FullName, "This is so easy", "Info").AddTags("Exceptionless").Submit();
 
 // Submit feature usages
 ExceptionlessClient.Default.SubmitFeatureUsage("MyFeature");
