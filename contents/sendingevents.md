@@ -14,6 +14,9 @@ Once configured, Exceptionless will automatically send any unhandled exceptions 
 You may also want to send us log messages, feature usages or other kinds of events. You can do this very easily with our fluent api.
 
 {% highlight c# %}
+// Import the exceptionless namespace.
+using Exceptionless;
+
 // Submit logs
 ExceptionlessClient.Default.SubmitLog("Logging made easy");
 
