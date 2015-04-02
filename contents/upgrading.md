@@ -22,7 +22,8 @@ Please read this guide when upgrading from Exceptionless 2.x. The Exceptionless 
 ##### Advanced
 The following changes affect a very small portion of users.
 
-1. Renamed Enrichments to Plugins. This means the following changes will need to be made if you were using enrichments.
+Renamed Enrichments to Plugins. The following changes will need to be made if you were using enrichments:
+
   1. `IEventEnrichment` has been renamed to `IEventPlugin`.
   2. `IEventPlugin.Enrich(context, event)` signature has been changed to `IEventPlugin.Run(context)`. The event has been moved to the context.
   3. `client.Configuration.AddEnrichment<IEventEnrichment>();` has been renamed to `client.Configuration.AddPlugin<IEventPlugin>();`.
