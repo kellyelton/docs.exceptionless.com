@@ -15,6 +15,19 @@ Please read this guide when upgrading from any version of Exceptionless. Upgradi
 
 For more information please see the official [NuGet documentation](https://docs.nuget.org/consume/Package-Manager-Dialog).
 
+##Upgrading from Exceptionless 2.x
+
+Please read this guide when upgrading from Exceptionless 2.x. The Exceptionless latest client has a few breaking changes from 2.x client that users should be aware of when upgrading. Please follow the guide below after upgrading your NuGet packages from version 2.x to the latest version.
+
+##### Advanced
+The following changes affect a very small portion of users.
+
+1. Renamed Enrichments to Plugins. This means the following changes will need to be made if you were using enrichments.
+  1. `IEventEnrichment` has been renamed to `IEventPlugin`.
+  2. `IEventPlugin.Enrich(context, event)` signature has been changed to `IEventPlugin.Run(context)`. The event has been moved to the context.
+  3. `client.Configuration.AddEnrichment<IEventEnrichment>();` has been renamed to `client.Configuration.AddPlugin<IEventPlugin>();`.
+  4. `EventPluginContext.Data` property has been renamed to `EventPluginContext.ContextData`.
+
 ##Upgrading from Exceptionless 1.x
 
 Please read this guide when upgrading from Exceptionless 1.x. The Exceptionless latest client has a few breaking changes from 1.x client that users should be aware of when upgrading. Please follow the guide below after upgrading your NuGet packages from version 1.x to the latest version.
@@ -47,7 +60,7 @@ The following changes affect a very small portion of users.
 
 1. `ErrorBuilder` has been renamed to `EventBuilder`.
 2. `client.Tags` has been moved to `client.Configuration.DefaultTags`.
-3. `IExceptionlessPlugin` has been replaced with `IEventEnrichment`. *NOTE: Enrichments can be registered via  `client.Configuration.AddEnrichment<IEventEnrichment>();`*
+3. `IExceptionlessPlugin` has been replaced with `IEventPlugin`. *NOTE: Plugins can be registered via  `client.Configuration.AddPlugin<IEventPlugin>();`*
 4. `client.Configuration["MySetting"]` has been moved to `client.Configuration.Settings["MySetting"]`.
 
 #### Events
