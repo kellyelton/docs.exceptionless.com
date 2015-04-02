@@ -22,12 +22,12 @@ Please read this guide when upgrading from Exceptionless 2.x. The Exceptionless 
 ##### Advanced
 The following changes affect a very small portion of users.
 
-Renamed Enrichments to Plugins. The following changes will need to be made if you were using enrichments:
-
-  1. `IEventEnrichment` has been renamed to `IEventPlugin`.
-  2. `IEventPlugin.Enrich(context, event)` signature has been changed to `IEventPlugin.Run(context)`. The event has been moved to the context.
-  3. `client.Configuration.AddEnrichment<IEventEnrichment>();` has been renamed to `client.Configuration.AddPlugin<IEventPlugin>();`.
-  4. `EventPluginContext.Data` property has been renamed to `EventPluginContext.ContextData`.
+1. Renamed Enrichments to Plugins. The following changes will need to be made if you were using enrichments:
+  * `IEventEnrichment` has been renamed to `IEventPlugin`.
+  * `IEventPlugin.Enrich(context, event)` signature has been changed to `IEventPlugin.Run(context)`. The event has been moved to the context.
+  * `client.Configuration.AddEnrichment<IEventEnrichment>();` has been renamed to `client.Configuration.AddPlugin<IEventPlugin>();`.
+  * `EventPluginContext.Data` property has been renamed to `EventPluginContext.ContextData`.
+  * `EventSubmittingEventArgs.EnrichmentContextData` property has been renamed to `EventSubmittingEventArgs.PluginContextData`.
 
 ##Upgrading from Exceptionless 1.x
 
