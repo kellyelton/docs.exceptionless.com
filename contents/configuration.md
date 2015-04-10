@@ -114,7 +114,8 @@ You can also configure exceptionless to capture all WCF exceptions following the
 3. Add the ExceptionlessWcfHandleErrorAttribute to your WCF Classes.
 
 {% highlight c# %}
-[Exceptionless.Web.ExceptionlessWcfHandleErrorAttribute]
+using Exceptionless.Web;
+[ExceptionlessWcfHandleErrorAttribute]
 {% endhighlight %}
 
 
