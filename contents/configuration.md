@@ -51,6 +51,8 @@ using Exceptionless.Configuration;
 ### Code
 
 {% highlight c# %}
+using Exceptionless;
+
 var client = new ExceptionlessClient(c => {
     c.ApiKey = "YOUR_API_KEY";
     c.SetVersion(version);
@@ -64,6 +66,7 @@ ExceptionlessClient.Default.Configuration.ApiKey = "YOUR_API_KEY"
 If you are using only the `Exceptionless.Portable` package, you'll need to configure exceptionless via attribute config or code. If you choose the attribute method, you'll need to read the configuration on startup.
 
 {% highlight c# %}
+using Exceptionless;
 ExceptionlessClient.Default.Configuration.ReadFromAttributes(typeof(MyClass).Assembly)
 {% endhighlight %}
 
@@ -91,12 +94,14 @@ different folder, then you can use the `storagePath` attribute or call `UseFolde
 ### Code
 
 {% highlight c# %}
+using Exceptionless;
 ExceptionlessClient.Default.Configuration.UseFolderStorage("C:\\ExceptionlessEvents");
 {% endhighlight %}
 
 You can also use in memory storage, this is recommended for high throughput logging scenarios. The client will store events in memory instead of serializing the events to disk, but at the expense that any unsubmitted events will be lost on application exit.
 
 {% highlight c# %}
+using Exceptionless;
 ExceptionlessClient.Default.Configuration.UseInMemoryStorage();
 {% endhighlight %}
 
@@ -109,7 +114,7 @@ You can also configure exceptionless to capture all WCF exceptions following the
 3. Add the ExceptionlessWcfHandleErrorAttribute to your WCF Classes.
 
 {% highlight c# %}
-[ExceptionlessWcfHandleErrorAttribute]
+[Exceptionless.Web.ExceptionlessWcfHandleErrorAttribute]
 {% endhighlight %}
 
 
@@ -154,6 +159,8 @@ using Exceptionless.Configuration;
 Then in your app, you can check the setting and determine if you should include the order data or not:
 
 {% highlight c# %}
+using Exceptionless;
+
 try {
   ...
 } catch (Exception ex) {
@@ -184,6 +191,7 @@ You can have the Exceptionless client automatically add extended data values to 
 ### Code
 
 {% highlight c# %}
+using Exceptionless;
 ExceptionlessClient.Default.Configuration.DefaultData["Data1"] = "Exceptionless";
 {% endhighlight %}
 
@@ -200,6 +208,7 @@ You can have the Exceptionless client automatically add specific tags to every r
 ### Code
 
 {% highlight c# %}
+using Exceptionless;
 ExceptionlessClient.Default.Configuration.DefaultTags.Add("Tag1");
 {% endhighlight %}
 
@@ -239,5 +248,6 @@ must set the `enableSSL` setting to `false`.
 ### Attribute
 
 {% highlight c# %}
+using Exceptionless.Configuration;
 [assembly: Exceptionless("YOUR_API_KEY", ServerUrl = "http://localhost", EnableSSL = false)]
 {% endhighlight %}
