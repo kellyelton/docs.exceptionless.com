@@ -184,7 +184,7 @@ You can have the Exceptionless client automatically add extended data values to 
 ### Code
 
 {% highlight c# %}
-ExceptionlessClient.Default.DefaultData["Data1"] = "Exceptionless";
+ExceptionlessClient.Default.Configuration.DefaultData["Data1"] = "Exceptionless";
 {% endhighlight %}
 
 ## Adding custom tags with every report
@@ -200,7 +200,7 @@ You can have the Exceptionless client automatically add specific tags to every r
 ### Code
 
 {% highlight c# %}
-ExceptionlessClient.Default.DefaultTags.Add("Tag1");
+ExceptionlessClient.Default.Configuration.DefaultTags.Add("Tag1");
 {% endhighlight %}
 
 ## Enabling trace message collection
