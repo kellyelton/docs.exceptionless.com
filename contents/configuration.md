@@ -48,6 +48,13 @@ using Exceptionless.Configuration;
 [assembly: Exceptionless("YOUR_API_KEY")]
 {% endhighlight %}
 
+The Exceptionless assembly attribute will only be picked up if it's defined in the entry or calling assembly. If you have placed the above attribute in different location you'll need to call the method below during startup.
+
+{% highlight c# %}
+using Exceptionless;
+ExceptionlessClient.Default.Configuration.ReadFromAttributes(typeof(MyClass).Assembly)
+{% endhighlight %}
+
 ### Code
 
 {% highlight c# %}
