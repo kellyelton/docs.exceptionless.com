@@ -10,9 +10,9 @@ permalink: /contents/search/
 Here are some answers to frequently asked questions about Search.
 
 ## Q: Can I search by multiple queries?
-**A:** Yes, all queries separated by a space will be an `AND` operation. If you wish to `OR` queries you'll need to use an `OR` statement.
+**A:** Yes, all queries separated by a space will be an `AND` operation. If you wish to `OR` queries you'll need to use an `OR` statement. We recommend wrapping conditional statements with parentheses.
 
-**Example:** Lets assume that we want to return all events that have a `blue` or `red` tag. To search for these events our query would be `tag:blue OR tag:red`
+**Example:** Lets assume that we want to return all events that have a `blue` or `red` tag. To search for these events our query would be `(tag:blue OR tag:red)`
 
 ## Q: Can I search by a wild card?
 **A:** Yes, you need to suffix your query with a `*`.
