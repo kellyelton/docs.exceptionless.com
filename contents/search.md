@@ -39,6 +39,9 @@ Here are some answers to frequently asked questions about Search.
 
 **Example:** Lets assume that our events extended data contains a property called `Age` with a value of `18`. To search for this value our query would be `data.age:18`.
 
+## Q: Can I search for values in complex objects(`Error.AddObject(customObject, "My Custom Object")`)?
+**A:** No. The only extra data you can search through is the custom extended data.
+
 ## Q: What fields can I search on?
 **A:** 
 
